@@ -44,8 +44,8 @@ const Hero = () => {
               Book a Discovery Call
               <ArrowRight className="w-5 h-5 ml-1" />
             </Button>
-            <Button variant="heroOutline" size="lg" className="text-base px-8 py-6">
-              View Open Roles
+            <Button variant="heroOutline" size="lg" className="text-base px-8 py-6" asChild>
+              <Link to="/open-roles">View Open Roles</Link>
             </Button>
           </div>
         </motion.div>
