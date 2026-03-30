@@ -12,6 +12,7 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           <a href="#services" className="hover:text-foreground transition-colors">Services</a>
+          <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
           <a href="#testimonials" className="hover:text-foreground transition-colors">Testimonials</a>
           <a
             href="https://www.linkedin.com/company/the-saas-recruiting-co"
