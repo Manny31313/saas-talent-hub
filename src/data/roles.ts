@@ -69,9 +69,9 @@ export const roles: Role[] = [
     id: "data-analyst",
     title: "Data Analyst",
     company: "B2B Strategy Co.",
-    location: "New York, NY (Hybrid)",
+    location: "Remote (US)",
     type: "Full-time",
-    salary: "$80k–$110k",
+    salary: "$80k–$110k OTE",
     tags: ["Analytics", "Data", "Mid-Level"],
     posted: "5 days ago",
     description:
