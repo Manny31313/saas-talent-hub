@@ -3,10 +3,11 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 
+const CALENDLY_URL = "https://calendly.com";
+
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background effects */}
       <div className="absolute inset-0 bg-[var(--gradient-hero)]" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-primary/5 blur-3xl" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-primary/3 blur-3xl" />
@@ -39,9 +40,11 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button variant="hero" size="lg" className="text-base px-8 py-6">
-              Book a Discovery Call
-              <ArrowRight className="w-5 h-5 ml-1" />
+            <Button variant="hero" size="lg" className="text-base px-8 py-6" asChild>
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+                Book a Discovery Call
+                <ArrowRight className="w-5 h-5 ml-1" />
+              </a>
             </Button>
             <Button variant="heroOutline" size="lg" className="text-base px-8 py-6" asChild>
               <Link to="/open-roles">View Open Roles</Link>
