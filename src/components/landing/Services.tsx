@@ -32,13 +32,16 @@ const Services = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="grid lg:grid-cols-[1fr_2fr] gap-12 mb-16 items-start"
         >
-          <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-4">
-            How We <span className="text-gradient">Help</span>
-          </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            Specialized recruiting built for the SaaS revenue engine.
+          <div>
+            <p className="text-sm uppercase tracking-widest text-primary font-medium mb-2">What We Do?</p>
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold">
+              Our <span className="text-gradient">Expertise.</span>
+            </h2>
+          </div>
+          <p className="text-lg text-muted-foreground leading-relaxed self-end">
+            If it touches any part of your hiring pipeline, we can help.
           </p>
         </motion.div>
 
