@@ -43,9 +43,9 @@ export const roles: Role[] = [
     id: "hr-generalist",
     title: "HR Generalist",
     company: "B2B Strategy Co.",
-    location: "Chicago, IL (Hybrid)",
+    location: "Remote (US)",
     type: "Full-time",
-    salary: "$65k–$85k",
+    salary: "$65k–$85k OTE",
     tags: ["HR", "People Ops", "Mid-Level"],
     posted: "3 days ago",
     description:
