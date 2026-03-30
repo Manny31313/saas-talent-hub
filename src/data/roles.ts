@@ -97,7 +97,7 @@ export const roles: Role[] = [
     company: "B2B Strategy Co.",
     location: "Remote (US)",
     type: "Full-time",
-    salary: "$70k–$95k",
+    salary: "$70k–$95k OTE",
     tags: ["Marketing", "Content", "B2B"],
     posted: "1 week ago",
     description:
