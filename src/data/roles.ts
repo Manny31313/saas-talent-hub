@@ -121,9 +121,9 @@ export const roles: Role[] = [
     id: "consultant",
     title: "Consultant",
     company: "B2B Strategy Co.",
-    location: "San Francisco, CA (On-site)",
+    location: "Remote (US)",
     type: "Full-time",
-    salary: "$100k–$140k",
+    salary: "$100k–$140k OTE",
     tags: ["Consulting", "Strategy", "Senior"],
     posted: "1 week ago",
     description:
