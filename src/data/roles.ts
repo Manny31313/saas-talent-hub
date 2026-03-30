@@ -147,7 +147,7 @@ export const roles: Role[] = [
     id: "account-executive",
     title: "Account Executive",
     company: "B2B Strategy Co.",
-    location: "Austin, TX (Hybrid)",
+    location: "Remote (US)",
     type: "Full-time",
     salary: "$120k–$170k OTE",
     tags: ["Sales", "Closing", "Mid-Senior"],
