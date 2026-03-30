@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
+const CALENDLY_URL = "https://calendly.com";
+
 const CTA = () => {
   return (
     <section className="py-24">
@@ -21,9 +23,11 @@ const CTA = () => {
               Let's talk about your hiring goals. No pitch decks, no fluff — just a
               real conversation about building your team.
             </p>
-            <Button variant="hero" size="lg" className="text-base px-8 py-6">
-              Get Started Today
-              <ArrowRight className="w-5 h-5 ml-1" />
+            <Button variant="hero" size="lg" className="text-base px-8 py-6" asChild>
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-1" />
+              </a>
             </Button>
           </div>
         </motion.div>
