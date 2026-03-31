@@ -20,8 +20,8 @@ const CTA = () => {
               Ready to hire your next <span className="text-gradient">A-player</span>?
             </h2>
             <p className="text-muted-foreground max-w-lg mx-auto mb-8">
-              Let's talk about your hiring goals. No pitch decks, no fluff — just a
-              real conversation about building your team.
+              A network of SaaS professionals & recruiting veterans ready to help
+              you hire quality talent, fast. Let's level up your team together.
             </p>
             <Button variant="hero" size="lg" className="text-base px-8 py-6" asChild>
               <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">

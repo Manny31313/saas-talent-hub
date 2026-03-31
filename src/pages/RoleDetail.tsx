@@ -201,6 +201,7 @@ const RoleDetail = () => {
                     </label>
                     <Textarea
                       required
+                      name="coverLetter"
                       placeholder="Tell us briefly why you're interested and what makes you stand out..."
                       maxLength={1000}
                       rows={4}

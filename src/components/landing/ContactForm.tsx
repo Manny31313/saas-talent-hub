@@ -135,6 +135,7 @@ const ContactForm = () => {
               <label className="text-sm font-medium text-foreground">Tell us more</label>
               <Textarea
                 required
+                name="message"
                 placeholder="Briefly describe your hiring needs, timeline, and any specifics..."
                 maxLength={1000}
                 rows={4}
