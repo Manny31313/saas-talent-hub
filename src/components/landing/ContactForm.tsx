@@ -51,8 +51,9 @@ const ContactForm = () => {
               Let's Build Your <span className="text-gradient">Dream Team</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Tell us about your hiring needs and we'll match you with the right
-              SaaS talent. No obligation, no fluff — just a real conversation.
+              We're a network of SaaS professionals & recruiting veterans ready to
+              help you hire quality talent, fast. Tell us about your needs and we'll
+              get to work.
             </p>
             <div className="space-y-4 text-sm text-muted-foreground">
               <div className="flex items-center gap-3">
