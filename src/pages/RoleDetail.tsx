@@ -178,6 +178,7 @@ const RoleDetail = () => {
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-foreground">Phone</label>
                     <Input
+                      name="phone"
                       placeholder="(optional)"
                       type="tel"
                       maxLength={20}
