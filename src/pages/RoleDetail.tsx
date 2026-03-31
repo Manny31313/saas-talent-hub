@@ -158,6 +158,7 @@ const RoleDetail = () => {
                     <label className="text-sm font-medium text-foreground">Full Name</label>
                     <Input
                       required
+                      name="name"
                       placeholder="Your full name"
                       maxLength={100}
                       className="bg-secondary/50 border-border placeholder:text-muted-foreground/50"
