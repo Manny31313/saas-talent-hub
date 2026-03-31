@@ -83,6 +83,7 @@ const ContactForm = () => {
                 <label className="text-sm font-medium text-foreground">Name</label>
                 <Input
                   required
+                  name="name"
                   placeholder="Your name"
                   maxLength={100}
                   className="bg-secondary/50 border-border placeholder:text-muted-foreground/50"
