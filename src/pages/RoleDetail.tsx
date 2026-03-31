@@ -168,6 +168,7 @@ const RoleDetail = () => {
                     <label className="text-sm font-medium text-foreground">Email</label>
                     <Input
                       required
+                      name="email"
                       type="email"
                       placeholder="you@email.com"
                       maxLength={255}
