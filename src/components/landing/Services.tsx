@@ -41,7 +41,7 @@ const Services = () => {
             </h2>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed self-end">
-            If it touches any part of your hiring pipeline, we can help.
+            We discover & deliver proven, quality SaaS talent across all verticals, markets, & roles.
           </p>
         </motion.div>
 

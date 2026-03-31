@@ -14,6 +14,19 @@ const ContactForm = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      company: formData.get("company"),
+      role: formData.get("role"),
+      message: formData.get("message"),
+    };
+
+    const mailtoLink = `mailto:keezerholdingsllc@gmail.com?subject=New Inquiry from ${data.name} at ${data.company}&body=Name: ${data.name}%0AEmail: ${data.email}%0ACompany: ${data.company}%0ARole Category: ${data.role}%0A%0AMessage:%0A${data.message}`;
+    window.open(mailtoLink, "_blank");
+
     setTimeout(() => {
       setIsSubmitting(false);
       toast({
@@ -38,8 +51,9 @@ const ContactForm = () => {
               Let's Build Your <span className="text-gradient">Dream Team</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Tell us about your hiring needs and we'll match you with the right
-              SaaS talent. No obligation, no fluff — just a real conversation.
+              We're a network of SaaS professionals & recruiting veterans ready to
+              help you hire quality talent, fast. Tell us about your needs and we'll
+              get to work.
             </p>
             <div className="space-y-4 text-sm text-muted-foreground">
               <div className="flex items-center gap-3">
@@ -70,6 +84,7 @@ const ContactForm = () => {
                 <label className="text-sm font-medium text-foreground">Name</label>
                 <Input
                   required
+                  name="name"
                   placeholder="Your name"
                   maxLength={100}
                   className="bg-secondary/50 border-border placeholder:text-muted-foreground/50"
@@ -79,6 +94,7 @@ const ContactForm = () => {
                 <label className="text-sm font-medium text-foreground">Email</label>
                 <Input
                   required
+                  name="email"
                   type="email"
                   placeholder="you@company.com"
                   maxLength={255}
@@ -91,6 +107,7 @@ const ContactForm = () => {
               <label className="text-sm font-medium text-foreground">Company</label>
               <Input
                 required
+                name="company"
                 placeholder="Your company name"
                 maxLength={150}
                 className="bg-secondary/50 border-border placeholder:text-muted-foreground/50"
@@ -99,7 +116,7 @@ const ContactForm = () => {
 
             <div className="space-y-2">
               <label className="text-sm font-medium text-foreground">What role(s) are you hiring for?</label>
-              <Select required>
+              <Select required name="role">
                 <SelectTrigger className="bg-secondary/50 border-border">
                   <SelectValue placeholder="Select a category" />
                 </SelectTrigger>
@@ -119,6 +136,7 @@ const ContactForm = () => {
               <label className="text-sm font-medium text-foreground">Tell us more</label>
               <Textarea
                 required
+                name="message"
                 placeholder="Briefly describe your hiring needs, timeline, and any specifics..."
                 maxLength={1000}
                 rows={4}

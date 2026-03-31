@@ -1,34 +1,34 @@
 import { motion } from "framer-motion";
-import { Search, ClipboardCheck, MessageSquare, Handshake } from "lucide-react";
+import { Map, Radio, Brain, BarChart3 } from "lucide-react";
 
 const steps = [
   {
-    icon: Search,
+    icon: Map,
     number: "01",
-    title: "Discovery",
+    title: "Mapping & Marketing Intelligence",
     description:
-      "We dig deep into your company culture, growth stage, and hiring needs to build a razor-sharp candidate profile.",
+      "We map out the entire SaaS landscape to identify elite talent. We pinpoint the top performers currently driving results across the talent & competitive landscape, ensuring we have a pulse on the best professionals in the market before a need even arises.",
   },
   {
-    icon: ClipboardCheck,
+    icon: Radio,
     number: "02",
-    title: "Search & Sourcing",
+    title: "Multi-Channel Engagement",
     description:
-      "Our SaaS-specialized network activates immediately — passive candidates, competitor mapping, and curated outreach.",
+      "The highest-impact talent rarely applies to active job postings. We utilize a sophisticated multi-channel outbound infrastructure to meet these A-Players where they're at, leveraging personalized, high-touch outreach that cuts through the noise.",
   },
   {
-    icon: MessageSquare,
+    icon: Brain,
     number: "03",
-    title: "Interview & Vetting",
+    title: "AI-Enhanced Vetting",
     description:
-      "We pre-screen every candidate for culture fit, technical ability, and revenue track record before they reach you.",
+      "We vet every candidate specifically for the unique demands of our clients. Utilizing AI to assist in deep-level competency mapping, we evaluate for the specific agility required to thrive within high-growth environments.",
   },
   {
-    icon: Handshake,
+    icon: BarChart3,
     number: "04",
-    title: "Placement & Support",
+    title: "Benchmarking & Data Visualization",
     description:
-      "From offer negotiation to onboarding check-ins, we stay involved to ensure long-term retention and success.",
+      "We provide high-level data visualization through interactive rankings and candidate benchmarking. This allows you to compare top-tier talent against market standards in real-time, giving you data-driven insights to make precise hiring decisions.",
   },
 ];
 
@@ -43,13 +43,13 @@ const Process = () => {
           className="grid lg:grid-cols-[1fr_2fr] gap-12 mb-16 items-start"
         >
           <div>
-            <p className="text-sm uppercase tracking-widest text-primary font-medium mb-2">How We Do It?</p>
+            <p className="text-sm uppercase tracking-widest text-primary font-medium mb-2">How We Do It</p>
             <h2 className="font-heading text-3xl sm:text-4xl font-bold">
               Our <span className="text-gradient">Process.</span>
             </h2>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed self-end">
-            A proven, repeatable framework that delivers A-players fast.
+            A proven, four-phase framework that delivers A-players fast — powered by market intelligence, multi-channel outreach, AI vetting, and data visualization.
           </p>
         </motion.div>
 

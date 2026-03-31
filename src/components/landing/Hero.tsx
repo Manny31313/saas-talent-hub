@@ -21,13 +21,13 @@ const Hero = () => {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6">
-              We find the{" "}
-              <span className="text-gradient">talent</span> that scales your SaaS.
+              We discover & deliver{" "}
+              <span className="text-gradient">proven SaaS talent.</span>
             </h1>
 
             <p className="text-lg text-muted-foreground max-w-lg mb-10 leading-relaxed">
-              From SDRs to C-Suite, we connect high-growth SaaS companies with
-              the revenue leaders and builders who move the needle.
+              Across all verticals, markets, & roles — we roll up our sleeves to
+              introduce you to the best candidates so you can hire, retain, and grow.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start gap-4">

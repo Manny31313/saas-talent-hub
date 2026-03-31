@@ -36,6 +36,19 @@ const RoleDetail = () => {
   const handleApply = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      linkedin: formData.get("linkedin"),
+      coverLetter: formData.get("coverLetter"),
+    };
+
+    const mailtoLink = `mailto:keezerholdingsllc@gmail.com?subject=Application for ${role.title} - ${data.name}&body=Name: ${data.name}%0AEmail: ${data.email}%0APhone: ${data.phone || "N/A"}%0ALinkedIn: ${data.linkedin || "N/A"}%0ARole: ${role.title}%0ACompany: ${role.company}%0A%0ACover Letter:%0A${data.coverLetter}`;
+    window.open(mailtoLink, "_blank");
+
     setTimeout(() => {
       setIsSubmitting(false);
       toast({
@@ -145,6 +158,7 @@ const RoleDetail = () => {
                     <label className="text-sm font-medium text-foreground">Full Name</label>
                     <Input
                       required
+                      name="name"
                       placeholder="Your full name"
                       maxLength={100}
                       className="bg-secondary/50 border-border placeholder:text-muted-foreground/50"
@@ -154,6 +168,7 @@ const RoleDetail = () => {
                     <label className="text-sm font-medium text-foreground">Email</label>
                     <Input
                       required
+                      name="email"
                       type="email"
                       placeholder="you@email.com"
                       maxLength={255}
@@ -163,6 +178,7 @@ const RoleDetail = () => {
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-foreground">Phone</label>
                     <Input
+                      name="phone"
                       placeholder="(optional)"
                       type="tel"
                       maxLength={20}
@@ -172,6 +188,7 @@ const RoleDetail = () => {
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-foreground">LinkedIn URL</label>
                     <Input
+                      name="linkedin"
                       placeholder="https://linkedin.com/in/yourprofile"
                       type="url"
                       maxLength={300}
@@ -184,6 +201,7 @@ const RoleDetail = () => {
                     </label>
                     <Textarea
                       required
+                      name="coverLetter"
                       placeholder="Tell us briefly why you're interested and what makes you stand out..."
                       maxLength={1000}
                       rows={4}
