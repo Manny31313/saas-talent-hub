@@ -106,6 +106,7 @@ const ContactForm = () => {
               <label className="text-sm font-medium text-foreground">Company</label>
               <Input
                 required
+                name="company"
                 placeholder="Your company name"
                 maxLength={150}
                 className="bg-secondary/50 border-border placeholder:text-muted-foreground/50"
