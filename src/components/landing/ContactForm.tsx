@@ -93,6 +93,7 @@ const ContactForm = () => {
                 <label className="text-sm font-medium text-foreground">Email</label>
                 <Input
                   required
+                  name="email"
                   type="email"
                   placeholder="you@company.com"
                   maxLength={255}
