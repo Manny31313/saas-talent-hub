@@ -115,7 +115,7 @@ const ContactForm = () => {
 
             <div className="space-y-2">
               <label className="text-sm font-medium text-foreground">What role(s) are you hiring for?</label>
-              <Select required>
+              <Select required name="role">
                 <SelectTrigger className="bg-secondary/50 border-border">
                   <SelectValue placeholder="Select a category" />
                 </SelectTrigger>
