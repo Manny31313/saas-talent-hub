@@ -188,6 +188,7 @@ const RoleDetail = () => {
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-foreground">LinkedIn URL</label>
                     <Input
+                      name="linkedin"
                       placeholder="https://linkedin.com/in/yourprofile"
                       type="url"
                       maxLength={300}
