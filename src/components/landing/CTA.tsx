@@ -20,7 +20,7 @@ const CTA = () => {
               Ready to hire your next <span className="text-gradient">A-player</span>?
             </h2>
             <p className="text-muted-foreground max-w-lg mx-auto mb-8">
-              A network of SaaS professionals & recruiting veterans ready to help
+              A network of Tech & SaaS professionals and recruiting veterans ready to help
               you hire quality talent, fast. Let's level up your team together.
             </p>
             <Button variant="hero" size="lg" className="text-base px-8 py-6" asChild>

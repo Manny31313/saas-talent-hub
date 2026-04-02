@@ -30,7 +30,7 @@ const Testimonials = () => {
           className="text-center mb-16"
         >
           <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-4">
-            Trusted by <span className="text-gradient">SaaS Leaders</span>
+            Trusted by <span className="text-gradient">Tech & SaaS Leaders</span>
           </h2>
         </motion.div>
 

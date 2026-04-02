@@ -22,24 +22,32 @@ const Hero = () => {
           >
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6">
               We discover & deliver{" "}
-              <span className="text-gradient">proven SaaS talent.</span>
+              <span className="text-gradient">proven Tech & SaaS talent.</span>
             </h1>
 
             <p className="text-lg text-muted-foreground max-w-lg mb-10 leading-relaxed">
-              Across all verticals, markets, & roles — we roll up our sleeves to
+              Across all verticals, markets, and roles, we roll up our sleeves to
               introduce you to the best candidates so you can hire, retain, and grow.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start gap-4">
-              <Button variant="hero" size="lg" className="text-base px-8 py-6" asChild>
-                <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-                  Book a Discovery Call
-                  <ArrowRight className="w-5 h-5 ml-1" />
-                </a>
-              </Button>
-              <Button variant="heroOutline" size="lg" className="text-base px-8 py-6" asChild>
-                <Link to="/open-roles">View Open Roles</Link>
-              </Button>
+              <div className="flex flex-col gap-2">
+                <Button variant="hero" size="lg" className="text-base px-8 py-6" asChild>
+                  <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+                    Book a Discovery Call
+                    <ArrowRight className="w-5 h-5 ml-1" />
+                  </a>
+                </Button>
+                <Button variant="heroOutline" size="sm" className="text-sm" asChild>
+                  <a href="#contact">Contact Form</a>
+                </Button>
+              </div>
+              <div className="flex flex-col items-start gap-1">
+                <Button variant="heroOutline" size="lg" className="text-base px-8 py-6" asChild>
+                  <Link to="/open-roles">View Open Roles</Link>
+                </Button>
+                <span className="text-xs text-muted-foreground pl-1">Looking for your next opportunity?</span>
+              </div>
             </div>
           </motion.div>
 
