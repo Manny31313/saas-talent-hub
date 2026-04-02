@@ -3,9 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Send } from "lucide-react";
+import { Send, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { Link } from "react-router-dom";
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -23,6 +24,34 @@ const ContactForm = () => {
       role: formData.get("role"),
       message: formData.get("message"),
     };
+
+    // ============================================================
+    // ATS INTEGRATION PLACEHOLDER
+    // Uncomment and configure when ready to connect your ATS.
+    //
+    // const ATS_CONFIG = {
+    //   ashby: {
+    //     apiEndpoint: "https://api.ashbyhq.com/candidate.create",
+    //     apiKey: "",  // Set via environment variable
+    //   },
+    //   greenhouse: {
+    //     apiEndpoint: "https://harvest.greenhouse.io/v1/candidates",
+    //     apiKey: "",  // Set via environment variable
+    //   },
+    // };
+    //
+    // async function submitToATS(candidate: typeof data) {
+    //   const response = await fetch(ATS_CONFIG.ashby.apiEndpoint, {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //       "Authorization": `Bearer ${ATS_CONFIG.ashby.apiKey}`,
+    //     },
+    //     body: JSON.stringify(candidate),
+    //   });
+    //   return response.json();
+    // }
+    // ============================================================
 
     const mailtoLink = `mailto:keezerholdingsllc@gmail.com?subject=New Inquiry from ${data.name} at ${data.company}&body=Name: ${data.name}%0AEmail: ${data.email}%0ACompany: ${data.company}%0ARole Category: ${data.role}%0A%0AMessage:%0A${data.message}`;
     window.open(mailtoLink, "_blank");
@@ -51,7 +80,7 @@ const ContactForm = () => {
               Let's Build Your <span className="text-gradient">Dream Team</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              We're a network of SaaS professionals & recruiting veterans ready to
+              We're a network of Tech & SaaS professionals and recruiting veterans ready to
               help you hire quality talent, fast. Tell us about your needs and we'll
               get to work.
             </p>
@@ -66,7 +95,7 @@ const ContactForm = () => {
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary" />
-                <span>No upfront fees — we work on success</span>
+                <span>No upfront fees, we work on success</span>
               </div>
             </div>
           </motion.div>
@@ -154,6 +183,15 @@ const ContactForm = () => {
               {isSubmitting ? "Sending..." : "Send Inquiry"}
               <Send className="w-4 h-4 ml-1" />
             </Button>
+
+            <div className="pt-2 text-center">
+              <Button variant="outline" size="lg" className="w-full text-base py-5 border-primary text-primary hover:bg-primary/10" asChild>
+                <Link to="/open-roles">
+                  Submit Resume Here
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+              </Button>
+            </div>
           </motion.form>
         </div>
       </div>

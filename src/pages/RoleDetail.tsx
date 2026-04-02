@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, MapPin, Clock, Banknote, Send, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, MapPin, Clock, Banknote, Send, CheckCircle2, Upload } from "lucide-react";
 import { roles } from "@/data/roles";
 import Navbar from "@/components/landing/Navbar";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 const RoleDetail = () => {
@@ -15,6 +15,8 @@ const RoleDetail = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [resumeFile, setResumeFile] = useState<File | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const role = roles.find((r) => r.id === id);
 
   if (!role) {
@@ -46,11 +48,44 @@ const RoleDetail = () => {
       coverLetter: formData.get("coverLetter"),
     };
 
-    const mailtoLink = `mailto:keezerholdingsllc@gmail.com?subject=Application for ${role.title} - ${data.name}&body=Name: ${data.name}%0AEmail: ${data.email}%0APhone: ${data.phone || "N/A"}%0ALinkedIn: ${data.linkedin || "N/A"}%0ARole: ${role.title}%0ACompany: ${role.company}%0A%0ACover Letter:%0A${data.coverLetter}`;
+    // ============================================================
+    // ATS INTEGRATION PLACEHOLDER
+    // Uncomment and configure when ready to connect your ATS.
+    //
+    // const ATS_CONFIG = {
+    //   ashby: {
+    //     apiEndpoint: "https://api.ashbyhq.com/candidate.create",
+    //     apiKey: "",  // Set via environment variable
+    //   },
+    //   greenhouse: {
+    //     apiEndpoint: "https://harvest.greenhouse.io/v1/candidates",
+    //     apiKey: "",  // Set via environment variable
+    //   },
+    // };
+    //
+    // async function submitToATS(candidate: typeof data, resume: File | null) {
+    //   const atsFormData = new FormData();
+    //   atsFormData.append("candidate", JSON.stringify(candidate));
+    //   if (resume) atsFormData.append("resume", resume);
+    //
+    //   const response = await fetch(ATS_CONFIG.ashby.apiEndpoint, {
+    //     method: "POST",
+    //     headers: {
+    //       "Authorization": `Bearer ${ATS_CONFIG.ashby.apiKey}`,
+    //     },
+    //     body: atsFormData,
+    //   });
+    //   return response.json();
+    // }
+    // ============================================================
+
+    const resumeNote = resumeFile ? `%0A%0AResume attached: ${resumeFile.name}` : "";
+    const mailtoLink = `mailto:keezerholdingsllc@gmail.com?subject=Application for ${role.title} - ${data.name}&body=Name: ${data.name}%0AEmail: ${data.email}%0APhone: ${data.phone || "N/A"}%0ALinkedIn: ${data.linkedin || "N/A"}%0ARole: ${role.title}%0ACompany: ${role.company}%0A%0ACover Letter:%0A${data.coverLetter}${resumeNote}`;
     window.open(mailtoLink, "_blank");
 
     setTimeout(() => {
       setIsSubmitting(false);
+      setResumeFile(null);
       toast({
         title: "Application submitted!",
         description: `Thanks for applying for ${role.title}. We'll be in touch soon.`,
@@ -194,6 +229,25 @@ const RoleDetail = () => {
                       maxLength={300}
                       className="bg-secondary/50 border-border placeholder:text-muted-foreground/50"
                     />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-foreground">Upload Resume</label>
+                    <input
+                      ref={fileInputRef}
+                      type="file"
+                      accept=".pdf,.doc,.docx"
+                      className="hidden"
+                      onChange={(e) => setResumeFile(e.target.files?.[0] || null)}
+                    />
+                    <Button
+                      type="button"
+                      variant="outline"
+                      className="w-full justify-start gap-2 bg-secondary/50 border-border text-muted-foreground"
+                      onClick={() => fileInputRef.current?.click()}
+                    >
+                      <Upload className="w-4 h-4" />
+                      {resumeFile ? resumeFile.name : "Choose file (PDF, DOC, DOCX)"}
+                    </Button>
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-foreground">

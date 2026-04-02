@@ -28,7 +28,7 @@ const Industries = () => {
             </h2>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed self-end">
-            If you have a revenue team, we can help you build a better one.
+            Whether you're building a team for the first time or looking to scale your current teams efforts, we'll save you the time and hassle to make sure you find the right people.
           </p>
         </motion.div>
 

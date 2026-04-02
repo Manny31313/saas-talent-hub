@@ -7,7 +7,7 @@ const steps = [
     number: "01",
     title: "Mapping & Marketing Intelligence",
     description:
-      "We map out the entire SaaS landscape to identify elite talent. We pinpoint the top performers currently driving results across the talent & competitive landscape, ensuring we have a pulse on the best professionals in the market before a need even arises.",
+      "We map out the entire Tech & SaaS landscape to identify elite talent. We pinpoint the top performers currently driving results across the talent and competitive landscape, ensuring we have a pulse on the best professionals in the market before a need even arises.",
   },
   {
     icon: Radio,
@@ -49,7 +49,7 @@ const Process = () => {
             </h2>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed self-end">
-            A proven, four-phase framework that delivers A-players fast — powered by market intelligence, multi-channel outreach, AI vetting, and data visualization.
+            A proven, four-phase framework that delivers A-players fast, powered by market intelligence, multi-channel outreach, AI vetting, and data visualization.
           </p>
         </motion.div>
 

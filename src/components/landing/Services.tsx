@@ -5,7 +5,7 @@ const services = [
   {
     icon: Target,
     title: "Executive Search",
-    description: "VP Sales, CRO, CMO, CTO — we headhunt the leaders who define your next growth chapter.",
+    description: "VP Sales, CRO, CMO, CTO. We headhunt the leaders who define your next growth chapter.",
   },
   {
     icon: Users,
@@ -35,13 +35,13 @@ const Services = () => {
           className="grid lg:grid-cols-[1fr_2fr] gap-12 mb-16 items-start"
         >
           <div>
-            <p className="text-sm uppercase tracking-widest text-primary font-medium mb-2">What We Do?</p>
+            <p className="text-sm uppercase tracking-widest text-primary font-medium mb-2">What We Do</p>
             <h2 className="font-heading text-3xl sm:text-4xl font-bold">
               Our <span className="text-gradient">Expertise.</span>
             </h2>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed self-end">
-            We discover & deliver proven, quality SaaS talent across all verticals, markets, & roles.
+            We discover and deliver proven, quality Tech & SaaS talent across all verticals, markets, and roles.
           </p>
         </motion.div>
 
