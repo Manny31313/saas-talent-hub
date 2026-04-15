@@ -5,8 +5,6 @@ import Services from "@/components/landing/Services";
 import Process from "@/components/landing/Process";
 import Industries from "@/components/landing/Industries";
 import Testimonials from "@/components/landing/Testimonials";
-import ContactForm from "@/components/landing/ContactForm";
-import CTA from "@/components/landing/CTA";
 import PromoOffer from "@/components/landing/PromoOffer";
 import Footer from "@/components/landing/Footer";
 
@@ -20,8 +18,6 @@ const Index = () => {
       <Process />
       <Industries />
       <Testimonials />
-      <ContactForm />
-      <CTA />
       <PromoOffer />
       <Footer />
     </div>
