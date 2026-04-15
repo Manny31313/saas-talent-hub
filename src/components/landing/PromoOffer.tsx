@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageSquare } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CALENDLY_URL = "https://calendly.com";
 
@@ -30,10 +31,10 @@ const PromoOffer = () => {
                 </a>
               </Button>
               <Button variant="heroOutline" size="lg" className="text-base px-8 py-6" asChild>
-                <a href="#contact">
+                <Link to="/dream-team">
                   <MessageSquare className="w-5 h-5 mr-2" />
                   Contact Us Now
-                </a>
+                </Link>
               </Button>
             </div>
           </div>
