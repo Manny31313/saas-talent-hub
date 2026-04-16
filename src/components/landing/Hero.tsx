@@ -30,23 +30,26 @@ const Hero = () => {
               introduce you to the best candidates so you can hire, retain, and grow.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-start gap-4">
-              <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-6">
+              {/* Primary CTA row */}
+              <div className="flex flex-col sm:flex-row items-start gap-4">
                 <Button variant="hero" size="lg" className="text-base px-8 py-6" asChild>
                   <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
                     Book a Discovery Call
                     <ArrowRight className="w-5 h-5 ml-1" />
                   </a>
                 </Button>
-                <Button variant="heroOutline" size="sm" className="text-sm" asChild>
+                <Button variant="heroOutline" size="lg" className="text-base px-8 py-6" asChild>
                   <a href="#contact">Contact Form</a>
                 </Button>
               </div>
-              <div className="flex flex-col items-start gap-1">
+
+              {/* Secondary CTA row */}
+              <div className="flex flex-col items-center gap-2 pt-2">
+                <span className="text-xs text-muted-foreground">Looking for your next opportunity?</span>
                 <Button variant="heroOutline" size="lg" className="text-base px-8 py-6" asChild>
                   <Link to="/open-roles">View Open Roles</Link>
                 </Button>
-                <span className="text-xs text-muted-foreground pl-1">Looking for your next opportunity?</span>
               </div>
             </div>
           </motion.div>
