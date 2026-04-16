@@ -40,7 +40,7 @@ const Hero = () => {
                   </a>
                 </Button>
                 <Button variant="heroOutline" size="lg" className="text-base px-8 py-6" asChild>
-                  <a href="#contact">Contact Form</a>
+                  <Link to="/dream-team">Contact Form</Link>
                 </Button>
               </div>
 
