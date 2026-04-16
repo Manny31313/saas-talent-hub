@@ -91,10 +91,6 @@ const ContactForm = () => {
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary" />
-                <span>First candidates presented in 5–7 days</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 rounded-full bg-primary" />
                 <span>No upfront fees, we work on success</span>
               </div>
             </div>
@@ -184,14 +180,6 @@ const ContactForm = () => {
               <Send className="w-4 h-4 ml-1" />
             </Button>
 
-            <div className="pt-2 text-center">
-              <Button variant="outline" size="lg" className="w-full text-base py-5 border-primary text-primary hover:bg-primary/10" asChild>
-                <Link to="/open-roles">
-                  Submit Resume Here
-                  <ArrowRight className="w-4 h-4 ml-1" />
-                </Link>
-              </Button>
-            </div>
           </motion.form>
         </div>
       </div>
