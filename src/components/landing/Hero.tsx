@@ -43,6 +43,14 @@ const Hero = () => {
                   <Link to="/dream-team">Contact Form</Link>
                 </Button>
               </div>
+
+              {/* Secondary CTA row */}
+              <div className="flex flex-col items-center gap-2 pt-2">
+                <span className="text-xs text-muted-foreground">Looking for your next opportunity?</span>
+                <Button variant="heroOutline" size="lg" className="text-base px-8 py-6" asChild>
+                  <Link to="/open-roles">View Open Roles</Link>
+                </Button>
+              </div>
             </div>
           </motion.div>
 
