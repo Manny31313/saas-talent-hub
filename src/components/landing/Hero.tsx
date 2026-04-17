@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-team.jpg";
+import OpportunityCTA from "./OpportunityCTA";
 
 const CALENDLY_URL = "https://calendly.com";
 
@@ -43,6 +44,8 @@ const Hero = () => {
                   <Link to="/dream-team">Contact Form</Link>
                 </Button>
               </div>
+
+              <OpportunityCTA />
             </div>
           </motion.div>
 
