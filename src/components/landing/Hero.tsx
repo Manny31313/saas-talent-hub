@@ -4,11 +4,11 @@ import heroImage from "@/assets/hero-team.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative flex items-center overflow-hidden pt-24 pb-8">
       <div className="absolute inset-0 bg-[var(--gradient-hero)]" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-primary/5 blur-3xl" />
 
-      <div className="container relative z-10 px-6 py-32">
+      <div className="container relative z-10 px-6 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left — Text */}
           <motion.div

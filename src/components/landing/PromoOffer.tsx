@@ -7,7 +7,7 @@ const CALENDLY_URL = "https://calendly.com";
 
 const PromoOffer = () => {
   return (
-    <section className="py-24">
+    <section className="pt-4 pb-16">
       <div className="container px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
