@@ -29,29 +29,6 @@ const Hero = () => {
               Across all verticals, markets, and roles, we roll up our sleeves to
               introduce you to the best candidates so you can hire, retain, and grow.
             </p>
-
-            <div className="flex flex-col gap-6">
-              {/* Primary CTA row */}
-              <div className="flex flex-col sm:flex-row items-start gap-4">
-                <Button variant="hero" size="lg" className="text-base px-8 py-6" asChild>
-                  <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-                    Book a Discovery Call
-                    <ArrowRight className="w-5 h-5 ml-1" />
-                  </a>
-                </Button>
-                <Button variant="heroOutline" size="lg" className="text-base px-8 py-6" asChild>
-                  <Link to="/dream-team">Contact Form</Link>
-                </Button>
-              </div>
-
-              {/* Secondary CTA row */}
-              <div className="flex flex-col items-center gap-2 pt-2">
-                <span className="text-xs text-muted-foreground">Looking for your next opportunity?</span>
-                <Button variant="heroOutline" size="lg" className="text-base px-8 py-6" asChild>
-                  <Link to="/open-roles">View Open Roles</Link>
-                </Button>
-              </div>
-            </div>
           </motion.div>
 
           {/* Right — Image */}
