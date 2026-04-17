@@ -76,9 +76,7 @@ const Industries = () => {
             </h2>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed self-end">
-          <p className="text-lg text-muted-foreground leading-relaxed self-end">
-            Whether you're building a team for the first time or looking to scale your current team's efforts, we'll save you the time and hassle of finding the right people across every corner of the SaaS ecosystem — whether you're in the software or service space.
-          </p>
+            Whether you're building a team for the first time or looking to scale your current team's efforts, we'll save you the time and hassle of finding the right people across every corner of the SaaS ecosystem, whether you're in the software or service space.
           </p>
         </motion.div>
 
