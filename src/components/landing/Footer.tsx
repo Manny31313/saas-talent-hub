@@ -28,5 +28,9 @@ const Footer = () => {
     </footer>
   );
 };
-
+          <a
+            href="https://www.linkedin.com/company/the-saas-recruiting-co"
+...
+            LinkedIn →
+          </a>
 export default Footer;
