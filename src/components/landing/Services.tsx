@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Users, Target, Rocket, Shield } from "lucide-react";
+import { Users, Target, BarChart2, UserCog } from "lucide-react";
 
 const services = [
   {
@@ -13,14 +13,14 @@ const services = [
     description: "AEs, SDRs, CSMs, and RevOps talent embedded in your pipeline within weeks, not months.",
   },
   {
-    icon: Rocket,
-    title: "Startup Scale-Ups",
-    description: "Seed to Series C, we build go-to-market teams from scratch with founders who move fast.",
+    icon: BarChart2,
+    title: "Data Science Roles",
+    description: "Data scientists, ML engineers, and analytics leaders who turn raw data into business impact.",
   },
   {
-    icon: Shield,
-    title: "Retained Partnerships",
-    description: "Ongoing talent strategy and pipeline for companies that never want to stop hiring A-players.",
+    icon: UserCog,
+    title: "People Operations",
+    description: "HR, Talent, and People Ops professionals who scale culture and build high-performing teams.",
   },
 ];
 
