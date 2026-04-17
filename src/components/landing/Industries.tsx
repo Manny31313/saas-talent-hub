@@ -55,7 +55,7 @@ const verticals = [
   },
   {
     name: "And Much More!",
-    specialties: "If your space isn't listed here, chances are we still cover it — let's talk.",
+    specialties: "If your space isn't listed here, chances are we still cover it, let's talk.",
   },
 ];
 
