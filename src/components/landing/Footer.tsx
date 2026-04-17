@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="border-t border-border py-12">
       <div className="container px-6">
         <p className="text-xs text-muted-foreground text-center mb-6 max-w-3xl mx-auto">
-          * Offer applies to first-time partners only. Subject to terms and conditions regarding candidate salary caps or role types.
+          * Free placement offer applies to first-time partners only. Subject to terms and conditions regarding candidate salary caps or role types.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
