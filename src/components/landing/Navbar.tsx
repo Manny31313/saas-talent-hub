@@ -18,6 +18,14 @@ const Navbar = () => {
           <Link to="/open-roles" className="hover:text-foreground transition-colors">Open Roles</Link>
           <a href="/#contact" className="hover:text-foreground transition-colors">Contact</a>
           <a href="/#testimonials" className="hover:text-foreground transition-colors">Testimonials</a>
+          <a
+            href="https://www.linkedin.com/company/the-saas-recruiting-co"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-foreground transition-colors"
+          >
+            LinkedIn
+          </a>
         </div>
 
         <Button variant="hero" size="sm" asChild>

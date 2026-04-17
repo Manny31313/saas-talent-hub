@@ -15,6 +15,14 @@ const Footer = () => {
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} The SaaS Recruiting Co. All rights reserved.
           </p>
+          <a
+            href="https://www.linkedin.com/company/the-saas-recruiting-co"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+          >
+            LinkedIn →
+          </a>
         </div>
       </div>
     </footer>
