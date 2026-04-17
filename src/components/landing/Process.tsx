@@ -5,30 +5,30 @@ const steps = [
   {
     icon: Map,
     number: "01",
-    title: "Mapping & Marketing Intelligence",
+    title: "Mapping & Market Intelligence",
     description:
-      "We map out the entire Tech & SaaS landscape to identify elite talent. We pinpoint the top performers currently driving results across the talent and competitive landscape, ensuring we have a pulse on the best professionals in the market before a need even arises.",
+      "We map out the entire SaaS landscape to identify elite talent. We pinpoint the top performers currently driving results across the talent & competitive landscape, ensuring we have a pulse on the best professionals in the market before a need even arises. We know the right talent pools to tap, the qualifying questions to ask, and the nuances to identify.",
   },
   {
     icon: Radio,
     number: "02",
     title: "Multi-Channel Engagement",
     description:
-      "The highest-impact talent rarely applies to active job postings. We utilize a sophisticated multi-channel outbound infrastructure to meet these A-Players where they're at, leveraging personalized, high-touch outreach that cuts through the noise.",
+      "The highest-impact talent doesn't always apply to active job postings. We utilize a sophisticated multi-channel outbound infrastructure to meet these high-performers where their at, leveraging our resources in addition to personalized, high-touch outreach that cuts through the noise of a crowded inbox.",
   },
   {
     icon: Brain,
     number: "03",
-    title: "AI-Enhanced Vetting",
+    title: "Expert Vetting",
     description:
-      "We vet every candidate specifically for the unique demands of our clients. Utilizing AI to assist in deep-level competency mapping, we evaluate for the specific agility required to thrive within high-growth environments.",
+      "We vet every candidate specifically for your unique demands. While we use modern tools to assist our research, we focus on identifying the human agility and grit required to thrive in high-growth environments and the traits a resume alone can't show.",
   },
   {
     icon: BarChart3,
     number: "04",
     title: "Benchmarking & Data Visualization",
     description:
-      "We provide high-level data visualization through interactive rankings and candidate benchmarking. This allows you to compare top-tier talent against market standards in real-time, giving you data-driven insights to make precise hiring decisions.",
+      "We provide clear, interactive rankings and candidate benchmarking so you can see exactly how talent compares to current market standards. You get the easy-to-digest, honest insights you need to make high-confidence hiring decisions.",
   },
 ];
 
