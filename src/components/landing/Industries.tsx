@@ -53,6 +53,10 @@ const verticals = [
     name: "RevOps & CRM",
     specialties: "Salesforce/HubSpot Architecture, Sales Funnel Automation",
   },
+  {
+    name: "And Much More!",
+    specialties: "If your space isn't listed here, chances are we still cover it — let's talk.",
+  },
 ];
 
 const Industries = () => {
