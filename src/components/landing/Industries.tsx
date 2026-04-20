@@ -106,8 +106,8 @@ const Industries = () => {
             transition={{ duration: 0.4, delay: 0.1 }}
             className="relative z-10"
           >
-            <div className="bg-primary/10 border border-primary/40 text-primary rounded-xl px-8 py-3 shadow-sm">
-              <span className="font-heading font-semibold text-lg tracking-wide">Software & Development</span>
+            <div className="bg-primary text-primary-foreground rounded-2xl px-10 py-5 shadow-lg">
+              <span className="font-heading font-bold text-2xl tracking-wide">Software & Development</span>
             </div>
           </motion.div>
 
