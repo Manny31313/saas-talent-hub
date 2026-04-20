@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const verticals = [
   {
     name: "Software & Development",
-    specialties: "Product Platform, Productized Service, Full-Stack, Mobile, QA, Platform Engineering",
+    specialties: "Product Platform, Productized Service, Full-Stack, Mobile, Platform Engineering",
   },
   {
     name: "Cybersecurity",
