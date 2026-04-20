@@ -2,6 +2,10 @@ import { motion } from "framer-motion";
 
 const verticals = [
   {
+    name: "Software & Development",
+    specialties: "Full-Stack, Frontend, Backend, Mobile, QA, Platform Engineering",
+  },
+  {
     name: "Cybersecurity",
     specialties: "Identity Management, Threat Intel, Zero-Trust, SOC",
   },
