@@ -98,6 +98,22 @@ const Industries = () => {
           {/* Trunk line */}
           <div className="w-px h-10 bg-primary/40" aria-hidden="true" />
 
+          {/* Software & Development tier */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.1 }}
+            className="relative z-10"
+          >
+            <div className="bg-primary/10 border border-primary/40 text-primary rounded-xl px-8 py-3 shadow-sm">
+              <span className="font-heading font-semibold text-lg tracking-wide">Software & Development</span>
+            </div>
+          </motion.div>
+
+          {/* Trunk line */}
+          <div className="w-px h-10 bg-primary/40" aria-hidden="true" />
+
           {/* Horizontal connector */}
           <div className="w-full max-w-6xl h-px bg-primary/40" aria-hidden="true" />
 
