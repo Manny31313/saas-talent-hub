@@ -41,7 +41,7 @@ const Services = () => {
             </h2>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed self-end">
-            We discover and deliver proven, quality Tech & SaaS talent across all verticals, markets, and roles.
+            Our team is backed by strategic advisors who have actually executed the roles we hire for, ensuring you partner with recruiters who deeply understand the technical and revenue nuances necessary to protect your ROI.
           </p>
         </motion.div>
 
