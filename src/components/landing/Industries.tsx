@@ -2,64 +2,20 @@ import { motion } from "framer-motion";
 
 const verticals = [
   {
-    name: "Software & Development",
-    specialties: "Product Platform, Productized Service, Full-Stack, Platform Engineering",
+    name: "Startup",
+    specialties: "Seed to Series C, First Hire to First Team, Rapid Scaling",
   },
   {
-    name: "Cybersecurity",
-    specialties: "Identity Management, Threat Intel, Zero-Trust, SOC",
+    name: "SMB",
+    specialties: "Growing Teams, Specialized Roles, Cost-Effective Hiring",
   },
   {
-    name: "Cloud & DevOps",
-    specialties: "Infrastructure-as-Code, SRE, Serverless, Cloud Migration",
+    name: "Midmarket",
+    specialties: "Scaling Departments, Leadership Hiring, Process Building",
   },
   {
-    name: "Advertising & MarTech",
-    specialties: "Programmatic, Attribution, Ad Operations, Digital Agencies",
-  },
-  {
-    name: "Business Intelligence (BI)",
-    specialties: "Data Analytics, Market Research, Data Visualization",
-  },
-  {
-    name: "Consulting",
-    specialties: "Digital Transformation, Strategy, Management Consulting",
-  },
-  {
-    name: "Finance",
-    specialties: "Banking, Payments, DeFi, Crypto, WealthTech",
-  },
-  {
-    name: "Retail & E-commerce",
-    specialties: "Omnichannel, Logistics, DTC, Supply Chain",
-  },
-  {
-    name: "CRE (Commercial Real Estate)",
-    specialties: "PropTech, Smart Buildings, Construction Tech",
-  },
-  {
-    name: "Healthcare & BioTech",
-    specialties: "Digital Health, Clinical Tech, Life Sciences, Genomics",
-  },
-  {
-    name: "Civic (GovTech)",
-    specialties: "Smart Cities, Public Safety, E-Governance, Voting Tech",
-  },
-  {
-    name: "EdTech",
-    specialties: "K-12, Higher Ed, Corporate Learning, LMS",
-  },
-  {
-    name: "Hospitality",
-    specialties: "Restaurant Tech, POS Systems, Entertainment & Leisure",
-  },
-  {
-    name: "RevOps & CRM",
-    specialties: "Salesforce/HubSpot Architecture, Sales Funnel Automation",
-  },
-  {
-    name: "And Much More!",
-    specialties: "If your space isn't listed here, chances are we still cover it, let's talk.",
+    name: "Enterprise",
+    specialties: "Executive Search, Global Talent, Strategic Workforce Planning",
   },
 ];
 
