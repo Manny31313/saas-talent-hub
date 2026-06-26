@@ -62,7 +62,7 @@ const Industries = () => {
           <div className="w-full max-w-6xl h-px bg-primary/40" aria-hidden="true" />
 
           {/* Branches */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl mt-0">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl mt-0">
             {verticals.map((v, i) => (
               <motion.div
                 key={v.name}
