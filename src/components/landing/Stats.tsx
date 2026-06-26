@@ -19,8 +19,8 @@ const Stats = () => {
           className="glass rounded-2xl p-8 sm:p-10 flex flex-col sm:flex-row items-center gap-8"
         >
           <div className="shrink-0">
-            <p className="text-sm uppercase tracking-widest text-muted-foreground font-medium">Past</p>
-            <p className="font-heading text-2xl font-bold text-gradient">Success</p>
+            <p className="text-sm uppercase tracking-widest text-muted-foreground font-medium">Current</p>
+            <p className="font-heading text-2xl font-bold text-gradient">Stats</p>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 flex-1 w-full">
