@@ -41,7 +41,7 @@ const Services = () => {
             </h2>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed self-end">
-            Our team is backed by strategic advisors who have actually executed the roles we hire for, ensuring you partner with recruiters who deeply understand the technical and nuances necessary to protect your ROI.
+            Our team is backed by strategic advisors who have actually executed the roles we hire for, ensuring you partner with recruiters who deeply understand the technical nuances necessary to protect your ROI.
           </p>
         </motion.div>
 
