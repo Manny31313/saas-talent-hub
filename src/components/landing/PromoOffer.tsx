@@ -18,10 +18,10 @@ const PromoOffer = () => {
           <div className="absolute inset-0 bg-[var(--gradient-hero)] opacity-50" />
           <div className="relative z-10">
             <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-6">
-              Your first placement is <span className="text-gradient">on us</span>.
+              No upfront fees. <span className="text-gradient">Only pay for results.</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto mb-8 text-lg leading-relaxed">
-              We're so confident in our ability to deliver A-players that we'll make your first placement completely free. No contracts, no commitments, just a chance to earn your business. Let us prove what we can do.*
+              We're so confident in our ability to deliver A-players that you only pay when we make a successful placement. No contracts, no commitments, just a chance to earn your business. Let us prove what we can do.*
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button variant="hero" size="lg" className="text-base px-8 py-6" asChild>
