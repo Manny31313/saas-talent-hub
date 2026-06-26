@@ -30,7 +30,7 @@ const Industries = () => {
           className="grid lg:grid-cols-[1fr_2fr] gap-12 mb-16 items-start"
         >
           <div>
-            <p className="text-sm uppercase tracking-widest text-primary font-medium mb-2">Industries</p>
+            <p className="text-sm uppercase tracking-widest text-primary font-medium mb-2">Company Size</p>
             <h2 className="font-heading text-3xl sm:text-4xl font-bold">
               Who We <span className="text-gradient">Help.</span>
             </h2>
