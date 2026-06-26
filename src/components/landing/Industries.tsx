@@ -2,64 +2,20 @@ import { motion } from "framer-motion";
 
 const verticals = [
   {
-    name: "Software & Development",
-    specialties: "Product Platform, Productized Service, Full-Stack, Platform Engineering",
+    name: "Startup",
+    specialties: "Seed to Series C, First Hire to First Team, Rapid Scaling",
   },
   {
-    name: "Cybersecurity",
-    specialties: "Identity Management, Threat Intel, Zero-Trust, SOC",
+    name: "SMB",
+    specialties: "Growing Teams, Specialized Roles, Cost-Effective Hiring",
   },
   {
-    name: "Cloud & DevOps",
-    specialties: "Infrastructure-as-Code, SRE, Serverless, Cloud Migration",
+    name: "Midmarket",
+    specialties: "Scaling Departments, Leadership Hiring, Process Building",
   },
   {
-    name: "Advertising & MarTech",
-    specialties: "Programmatic, Attribution, Ad Operations, Digital Agencies",
-  },
-  {
-    name: "Business Intelligence (BI)",
-    specialties: "Data Analytics, Market Research, Data Visualization",
-  },
-  {
-    name: "Consulting",
-    specialties: "Digital Transformation, Strategy, Management Consulting",
-  },
-  {
-    name: "Finance",
-    specialties: "Banking, Payments, DeFi, Crypto, WealthTech",
-  },
-  {
-    name: "Retail & E-commerce",
-    specialties: "Omnichannel, Logistics, DTC, Supply Chain",
-  },
-  {
-    name: "CRE (Commercial Real Estate)",
-    specialties: "PropTech, Smart Buildings, Construction Tech",
-  },
-  {
-    name: "Healthcare & BioTech",
-    specialties: "Digital Health, Clinical Tech, Life Sciences, Genomics",
-  },
-  {
-    name: "Civic (GovTech)",
-    specialties: "Smart Cities, Public Safety, E-Governance, Voting Tech",
-  },
-  {
-    name: "EdTech",
-    specialties: "K-12, Higher Ed, Corporate Learning, LMS",
-  },
-  {
-    name: "Hospitality",
-    specialties: "Restaurant Tech, POS Systems, Entertainment & Leisure",
-  },
-  {
-    name: "RevOps & CRM",
-    specialties: "Salesforce/HubSpot Architecture, Sales Funnel Automation",
-  },
-  {
-    name: "And Much More!",
-    specialties: "If your space isn't listed here, chances are we still cover it, let's talk.",
+    name: "Enterprise",
+    specialties: "Executive Search, Global Talent, Strategic Workforce Planning",
   },
 ];
 
@@ -74,7 +30,7 @@ const Industries = () => {
           className="grid lg:grid-cols-[1fr_2fr] gap-12 mb-16 items-start"
         >
           <div>
-            <p className="text-sm uppercase tracking-widest text-primary font-medium mb-2">Industries</p>
+            <p className="text-sm uppercase tracking-widest text-primary font-medium mb-2">Company Size</p>
             <h2 className="font-heading text-3xl sm:text-4xl font-bold">
               Who We <span className="text-gradient">Help.</span>
             </h2>
@@ -106,7 +62,7 @@ const Industries = () => {
           <div className="w-full max-w-6xl h-px bg-primary/40" aria-hidden="true" />
 
           {/* Branches */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl mt-0">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl mt-0">
             {verticals.map((v, i) => (
               <motion.div
                 key={v.name}
