@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { Map, Radio, Brain, BarChart3 } from "lucide-react";
 
 const steps = [
@@ -14,27 +15,28 @@ const steps = [
     number: "02",
     title: "Multi-Channel Engagement",
     description:
-      "The highest-impact talent doesn't always apply to active job postings. We utilize a sophisticated multi-channel outbound infrastructure to meet these high-performers where their at, leveraging our resources in addition to personalized, high-touch outreach that cuts through the noise of a crowded inbox.",
+      "The highest-impact talent doesn't always apply to active job postings. We utilize a multi-channel outbound infrastructure to meet these high-performers where their at, leveraging our resources in addition to personalized, high-touch outreach that cuts through the noise of a crowded inbox.",
   },
   {
     icon: Brain,
     number: "03",
     title: "Expert Vetting",
     description:
-      "We vet every candidate specifically for your unique demands. While we use modern tools to assist our research, we focus on identifying the human agility and grit required to thrive in high-growth environments and the traits a resume alone can't show.",
+      "We vet every candidate specifically for your unique demands. While we use modern tools to assist our efforts, we focus on identifying the human agility and grit required to thrive in high-growth environments and the traits a resume alone can't show.",
   },
   {
     icon: BarChart3,
     number: "04",
-    title: "Benchmarking & Data Visualization",
+    title: "Benchmarking",
     description:
-      "We provide clear, interactive rankings and candidate benchmarking so you can see exactly how talent compares to current market standards. You get the easy-to-digest, honest insights you need to make high-confidence hiring decisions.",
+      "We provide clear rankings and candidate benchmarking so you can see exactly how talent compares to current market standards. You get the easy-to-digest, honest insights you need to make high-confidence hiring decisions.",
   },
 ];
 
 const Process = () => {
+  const [flipped, setFlipped] = useState<number | null>(null);
   return (
-    <section className="py-24">
+    <section className="py-12">
       <div className="container px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -54,29 +56,55 @@ const Process = () => {
         </motion.div>
 
         <div className="grid sm:grid-cols-2 gap-6">
-          {steps.map((step, i) => (
-            <motion.div
-              key={step.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.12, duration: 0.5 }}
-              className="glass rounded-xl p-8 flex gap-6 hover:border-primary/30 transition-colors"
-            >
-              <div className="shrink-0">
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <step.icon className="w-7 h-7 text-primary" />
+          {steps.map((step, i) => {
+            const isFlipped = flipped === i;
+            return (
+              <motion.div
+                key={step.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.12, duration: 0.5 }}
+                className="relative min-h-[260px] cursor-pointer"
+                style={{ perspective: "1200px" }}
+                onClick={() => setFlipped(isFlipped ? null : i)}
+              >
+                <div
+                  className="relative w-full h-full min-h-[260px] transition-transform duration-700"
+                  style={{
+                    transformStyle: "preserve-3d",
+                    transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
+                  }}
+                >
+                  {/* Front */}
+                  <div
+                    className="absolute inset-0 glass rounded-xl p-8 flex flex-col items-center justify-center text-center hover:border-primary/30 transition-colors"
+                    style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
+                  >
+                    <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                      <step.icon className="w-7 h-7 text-primary" />
+                    </div>
+                    <span className="block text-xs font-heading font-bold text-muted-foreground mb-2">
+                      {step.number}
+                    </span>
+                    <h3 className="font-heading text-xl font-semibold mb-2">{step.title}</h3>
+                    <p className="text-xs text-muted-foreground/70">Click to learn more</p>
+                  </div>
+                  {/* Back */}
+                  <div
+                    className="absolute inset-0 glass rounded-xl p-8 flex items-center justify-center border-primary/30"
+                    style={{
+                      backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden",
+                      transform: "rotateY(180deg)",
+                    }}
+                  >
+                    <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
+                  </div>
                 </div>
-                <span className="block text-center mt-2 text-xs font-heading font-bold text-muted-foreground">
-                  {step.number}
-                </span>
-              </div>
-              <div>
-                <h3 className="font-heading text-xl font-semibold mb-2">{step.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
