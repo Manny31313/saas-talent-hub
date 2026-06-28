@@ -1,27 +1,33 @@
 import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
+import sarahImg from "@/assets/testimonial-sarah.jpg";
+import jamesImg from "@/assets/testimonial-james.jpg";
+import priyaImg from "@/assets/testimonial-priya.jpg";
 
 const testimonials = [
   {
     quote: "They filled our entire AE team in under 30 days. Every hire has exceeded quota. Unreal.",
     name: "Sarah Chen",
     title: "VP Sales, CloudStack",
+    image: sarahImg,
   },
   {
     quote: "Finally, a recruiter that actually understands SaaS sales motions and what 'good' looks like.",
     name: "James Park",
     title: "CEO, DataLoop",
+    image: jamesImg,
   },
   {
     quote: "Our Series B demanded fast, quality hires. The SaaS Recruiting Co delivered on both.",
     name: "Priya Mehta",
     title: "COO, Revenix",
+    image: priyaImg,
   },
 ];
 
 const Testimonials = () => {
   return (
-    <section className="py-24 bg-secondary/30" id="testimonials">
+    <section className="py-12 bg-secondary/30" id="testimonials">
       <div className="container px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -42,13 +48,24 @@ const Testimonials = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15, duration: 0.5 }}
-              className="glass rounded-xl p-6 flex flex-col"
+              className="relative rounded-xl overflow-hidden flex flex-col min-h-[420px] border border-border"
             >
-              <Quote className="w-8 h-8 text-primary/40 mb-4" />
-              <p className="text-foreground/90 leading-relaxed mb-6 flex-1">"{t.quote}"</p>
-              <div>
-                <div className="font-heading font-semibold text-sm">{t.name}</div>
-                <div className="text-xs text-muted-foreground">{t.title}</div>
+              <img
+                src={t.image}
+                alt={`${t.name} headshot`}
+                loading="lazy"
+                width={1024}
+                height={1024}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/85 to-background/20" />
+              <div className="relative z-10 flex flex-col h-full p-6 mt-auto">
+                <Quote className="w-8 h-8 text-primary/60 mb-4" />
+                <p className="text-foreground leading-relaxed mb-6 flex-1">"{t.quote}"</p>
+                <div>
+                  <div className="font-heading font-semibold text-sm">{t.name}</div>
+                  <div className="text-xs text-muted-foreground">{t.title}</div>
+                </div>
               </div>
             </motion.div>
           ))}
