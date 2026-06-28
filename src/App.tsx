@@ -8,7 +8,6 @@ import NotFound from "./pages/NotFound.tsx";
 import OpenRoles from "./pages/OpenRoles.tsx";
 import RoleDetail from "./pages/RoleDetail.tsx";
 import DreamTeam from "./pages/DreamTeam.tsx";
-import Candidates from "./pages/Candidates.tsx";
 
 const queryClient = new QueryClient();
 
@@ -23,7 +22,6 @@ const App = () => (
           <Route path="/open-roles" element={<OpenRoles />} />
           <Route path="/open-roles/:id" element={<RoleDetail />} />
           <Route path="/dream-team" element={<DreamTeam />} />
-          <Route path="/candidates" element={<Candidates />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

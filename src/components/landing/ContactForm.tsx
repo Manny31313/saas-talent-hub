@@ -67,7 +67,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="py-12 border-t border-border" id="contact">
+    <section className="py-24 border-t border-border" id="contact">
       <div className="container px-6">
         <div className="grid lg:grid-cols-2 gap-16 max-w-5xl mx-auto">
           <motion.div
