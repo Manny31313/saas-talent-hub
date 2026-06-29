@@ -26,13 +26,13 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="py-24" id="services">
+    <section className="py-14" id="services">
       <div className="container px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="grid lg:grid-cols-[1fr_2fr] gap-12 mb-16 items-start"
+          className="grid lg:grid-cols-[1fr_2fr] gap-12 mb-10 items-start"
         >
           <div>
             <p className="text-sm uppercase tracking-widest text-primary font-medium mb-2">What We Do</p>

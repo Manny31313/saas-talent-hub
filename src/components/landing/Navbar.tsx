@@ -1,8 +1,23 @@
 import { Button } from "@/components/ui/button";
-import { Briefcase } from "lucide-react";
+import { Briefcase, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+} from "@/components/ui/dropdown-menu";
 
-const CALENDLY_URL = "https://calendly.com";
+const CALENDLY_URL = "https://calendly.com/emmanuel-j-keezer/sync-w-saas-recruiting-co";
+
+const LOCATIONS = [
+  "U.S. (all cities)",
+  "EMEA (all regions)",
+  "APAC (all regions)",
+  "Canada (all provinces)",
+];
 
 const Navbar = () => {
   return (
@@ -14,15 +29,52 @@ const Navbar = () => {
         </Link>
 
         <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
-          <a href="/#services" className="hover:text-foreground transition-colors">Services</a>
-          <Link to="/open-roles" className="hover:text-foreground transition-colors">Open Roles</Link>
-          <a href="/#contact" className="hover:text-foreground transition-colors">Contact</a>
+          {/* Services dropdown */}
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center gap-1 hover:text-foreground transition-colors outline-none">
+              Services <ChevronDown className="w-3.5 h-3.5" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start" className="w-56">
+              <DropdownMenuLabel className="text-xs uppercase tracking-wider text-muted-foreground">What We Do</DropdownMenuLabel>
+              <DropdownMenuItem asChild>
+                <a href="/#services">Our Expertise</a>
+              </DropdownMenuItem>
+              <DropdownMenuSeparator />
+              <DropdownMenuLabel className="text-xs uppercase tracking-wider text-muted-foreground">Who We Help</DropdownMenuLabel>
+              <DropdownMenuItem asChild>
+                <a href="/#who-we-help">Company Sizes</a>
+              </DropdownMenuItem>
+              <DropdownMenuSeparator />
+              <DropdownMenuLabel className="text-xs uppercase tracking-wider text-muted-foreground">Locations We Serve</DropdownMenuLabel>
+              {LOCATIONS.map((loc) => (
+                <DropdownMenuItem key={loc} disabled className="opacity-100 focus:bg-transparent cursor-default text-foreground/80">
+                  {loc}
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          {/* For Candidates dropdown */}
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center gap-1 hover:text-foreground transition-colors outline-none">
+              For Candidates <ChevronDown className="w-3.5 h-3.5" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start" className="w-48">
+              <DropdownMenuItem asChild>
+                <Link to="/candidates">Submit Resume Here</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/open-roles">Open Roles</Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           <a href="/#testimonials" className="hover:text-foreground transition-colors">Testimonials</a>
         </div>
 
         <Button variant="hero" size="sm" asChild>
           <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-            Let's Talk
+            Let's Connect
           </a>
         </Button>
       </div>

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Map, Radio, Brain, BarChart3 } from "lucide-react";
+import { useState } from "react";
 
 const steps = [
   {
@@ -14,33 +15,34 @@ const steps = [
     number: "02",
     title: "Multi-Channel Engagement",
     description:
-      "The highest-impact talent doesn't always apply to active job postings. We utilize a sophisticated multi-channel outbound infrastructure to meet these high-performers where their at, leveraging our resources in addition to personalized, high-touch outreach that cuts through the noise of a crowded inbox.",
+      "The highest-impact talent doesn't always apply to active job postings. We utilize a multi-channel outbound infrastructure to meet these high-performers where their at, leveraging our resources in addition to personalized, high-touch outreach that cuts through the noise of a crowded inbox.",
   },
   {
     icon: Brain,
     number: "03",
     title: "Expert Vetting",
     description:
-      "We vet every candidate specifically for your unique demands. While we use modern tools to assist our research, we focus on identifying the human agility and grit required to thrive in high-growth environments and the traits a resume alone can't show.",
+      "We vet every candidate specifically for your unique demands. While we use modern tools to assist our efforts, we focus on identifying the human agility and grit required to thrive in high-growth environments and the traits a resume alone can't show.",
   },
   {
     icon: BarChart3,
     number: "04",
-    title: "Benchmarking & Data Visualization",
+    title: "Benchmarking",
     description:
-      "We provide clear, interactive rankings and candidate benchmarking so you can see exactly how talent compares to current market standards. You get the easy-to-digest, honest insights you need to make high-confidence hiring decisions.",
+      "We provide clear rankings and candidate benchmarking so you can see exactly how talent compares to current market standards. You get the easy-to-digest, honest insights you need to make high-confidence hiring decisions.",
   },
 ];
 
 const Process = () => {
+  const [flipped, setFlipped] = useState<number | null>(null);
   return (
-    <section className="py-24">
+    <section className="py-14">
       <div className="container px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="grid lg:grid-cols-[1fr_2fr] gap-12 mb-16 items-start"
+          className="grid lg:grid-cols-[1fr_2fr] gap-12 mb-10 items-start"
         >
           <div>
             <p className="text-sm uppercase tracking-widest text-primary font-medium mb-2">How We Do It</p>
@@ -61,19 +63,33 @@ const Process = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.12, duration: 0.5 }}
-              className="glass rounded-xl p-8 flex gap-6 hover:border-primary/30 transition-colors"
+              className="[perspective:1200px] cursor-pointer min-h-[220px]"
+              onClick={() => setFlipped(flipped === i ? null : i)}
             >
-              <div className="shrink-0">
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <step.icon className="w-7 h-7 text-primary" />
+              <div
+                className={`relative w-full h-full min-h-[220px] transition-transform duration-700 [transform-style:preserve-3d] ${
+                  flipped === i ? "[transform:rotateY(180deg)]" : ""
+                }`}
+              >
+                {/* Front */}
+                <div className="absolute inset-0 glass rounded-xl p-8 flex gap-6 hover:border-primary/30 transition-colors [backface-visibility:hidden]">
+                  <div className="shrink-0">
+                    <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
+                      <step.icon className="w-7 h-7 text-primary" />
+                    </div>
+                    <span className="block text-center mt-2 text-xs font-heading font-bold text-muted-foreground">
+                      {step.number}
+                    </span>
+                  </div>
+                  <div className="flex-1 flex flex-col justify-center">
+                    <h3 className="font-heading text-xl font-semibold mb-2">{step.title}</h3>
+                    <p className="text-xs uppercase tracking-widest text-primary/70">Click to learn more</p>
+                  </div>
                 </div>
-                <span className="block text-center mt-2 text-xs font-heading font-bold text-muted-foreground">
-                  {step.number}
-                </span>
-              </div>
-              <div>
-                <h3 className="font-heading text-xl font-semibold mb-2">{step.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
+                {/* Back */}
+                <div className="absolute inset-0 glass rounded-xl p-8 flex items-center [backface-visibility:hidden] [transform:rotateY(180deg)] border-primary/30">
+                  <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
+                </div>
               </div>
             </motion.div>
           ))}
