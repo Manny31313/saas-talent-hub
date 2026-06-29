@@ -1,40 +1,67 @@
 import { motion } from "framer-motion";
-import { Map, Radio, Brain, BarChart3 } from "lucide-react";
-import { useState } from "react";
+import { Compass, Send, Filter, Trophy, HeartHandshake } from "lucide-react";
 
 const steps = [
   {
-    icon: Map,
-    number: "01",
-    title: "Mapping & Market Intelligence",
-    description:
-      "We map out the entire SaaS landscape to identify elite talent. We pinpoint the top performers currently driving results across the talent & competitive landscape, ensuring we have a pulse on the best professionals in the market before a need even arises. We know the right talent pools to tap, the qualifying questions to ask, and the nuances to identify.",
+    icon: Compass,
+    day: "Day 1",
+    title: "The Blueprint & Immediate Market Mapping",
+    body: (
+      <p>
+        We kick off with a sharp strategy session to lock in your ideal candidate profile. Tell us exactly who you want to hire—whether it's a VP of Marketing or a Senior ML Engineer. We don't guess; we immediately begin mapping the entire current SaaS landscape from scratch to target your exact competitors.
+      </p>
+    ),
   },
   {
-    icon: Radio,
-    number: "02",
-    title: "Multi-Channel Engagement",
-    description:
-      "The highest-impact talent doesn't always apply to active job postings. We utilize a multi-channel outbound infrastructure to meet these high-performers where their at, leveraging our resources in addition to personalized, high-touch outreach that cuts through the noise of a crowded inbox.",
+    icon: Send,
+    day: "Day 2",
+    title: "Tailored, Up-to-Date List Delivery & Dual-Channel Launch",
+    body: (
+      <ul className="space-y-3 list-none">
+        <li>
+          <span className="font-semibold text-foreground">Your Immediate Deliverable:</span>{" "}
+          Within 24 hours, we deliver a tailored, up-to-date market map directly to you. This gives you instant visibility into the exact elite talent pool before we even hop on a call with them.
+        </li>
+        <li>
+          <span className="font-semibold text-foreground">The Dual-Channel Engine:</span>{" "}
+          Simultaneously, we deploy our outbound infrastructure to hunt down the passive high-performers on your list, while opening a targeted inbound funnel via job postings to capture hidden heavy-hitters who might not have been on our initial radar.
+        </li>
+      </ul>
+    ),
   },
   {
-    icon: Brain,
-    number: "03",
-    title: "Expert Vetting",
-    description:
-      "We vet every candidate specifically for your unique demands. While we use modern tools to assist our efforts, we focus on identifying the human agility and grit required to thrive in high-growth environments and the traits a resume alone can't show.",
+    icon: Filter,
+    day: "Week 1",
+    title: "Rigorous Vetting & Pipeline Filtering",
+    body: (
+      <p>
+        As responses flood in from both channels, our vetting engine takes over. While we utilize modern AI-driven tools to assist our efforts, our core focus is filtering out the fluff. We deeply screen candidates for real technical grit, role-specific personality traits, and the psychological fit required to thrive under the pressure of a high-growth ecosystem—keeping you updated in real-time via Slack or Email as we aggressively refine the list.
+      </p>
+    ),
   },
   {
-    icon: BarChart3,
-    number: "04",
-    title: "Benchmarking",
-    description:
-      "We provide clear rankings and candidate benchmarking so you can see exactly how talent compares to current market standards. You get the easy-to-digest, honest insights you need to make high-confidence hiring decisions.",
+    icon: Trophy,
+    day: "Week 2",
+    title: "Final Revised Shortlist & Hand-Off",
+    body: (
+      <p>
+        The culmination of the sprint. We deliver a highly concentrated, benchmarked final pipeline of elite talent who are thoroughly vetted, highly interested, and ready to interview. You receive the clean, easy-to-digest, honest insights needed to make high-confidence, rapid hiring decisions.
+      </p>
+    ),
+  },
+  {
+    icon: HeartHandshake,
+    day: "Post-Hire",
+    title: "30-Day Onboarding Check-In & Retention Insurance",
+    body: (
+      <p>
+        Our job doesn't end when the offer is signed. We operate on a standard Net 30 structure, and within those first 30 days, we conduct dedicated alignment check-ins with both you and your new hire. This ensures seamless integration into your high-growth culture, uncovers early performance bottlenecks, and protects your hiring ROI from day one.
+      </p>
+    ),
   },
 ];
 
 const Process = () => {
-  const [flipped, setFlipped] = useState<number | null>(null);
   return (
     <section className="py-14">
       <div className="container px-6">
@@ -42,7 +69,7 @@ const Process = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="grid lg:grid-cols-[1fr_2fr] gap-12 mb-10 items-start"
+          className="grid lg:grid-cols-[1fr_2fr] gap-12 mb-12 items-start"
         >
           <div>
             <p className="text-sm uppercase tracking-widest text-primary font-medium mb-2">How We Do It</p>
@@ -51,48 +78,49 @@ const Process = () => {
             </h2>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed self-end">
-            A proven, four-phase framework that delivers A-players fast, powered by market intelligence, multi-channel outreach, AI vetting, and data visualization.
+            A high-velocity, 14-day sprint built on total market transparency and elite vetting. We don't recycle stale databases—we build fresh maps for your exact role, every single time.
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 gap-6">
-          {steps.map((step, i) => (
-            <motion.div
-              key={step.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.12, duration: 0.5 }}
-              className="[perspective:1200px] cursor-pointer min-h-[220px]"
-              onClick={() => setFlipped(flipped === i ? null : i)}
-            >
-              <div
-                className={`relative w-full h-full min-h-[220px] transition-transform duration-700 [transform-style:preserve-3d] ${
-                  flipped === i ? "[transform:rotateY(180deg)]" : ""
-                }`}
+        <div className="relative max-w-4xl mx-auto">
+          {/* Vertical connector line */}
+          <div
+            aria-hidden
+            className="absolute left-6 sm:left-8 top-3 bottom-3 w-px bg-gradient-to-b from-primary/60 via-primary/30 to-transparent"
+          />
+
+          <ol className="space-y-8">
+            {steps.map((step, i) => (
+              <motion.li
+                key={step.title}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ delay: i * 0.08, duration: 0.5 }}
+                className="relative pl-20 sm:pl-24 group"
               >
-                {/* Front */}
-                <div className="absolute inset-0 glass rounded-xl p-8 flex gap-6 hover:border-primary/30 transition-colors [backface-visibility:hidden]">
-                  <div className="shrink-0">
-                    <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
-                      <step.icon className="w-7 h-7 text-primary" />
+                {/* Node */}
+                <div className="absolute left-0 top-0 flex items-center justify-center">
+                  <div className="relative">
+                    <div className="absolute inset-0 rounded-full bg-primary/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="relative w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-card border-2 border-primary/40 flex items-center justify-center shadow-sm group-hover:border-primary transition-colors">
+                      <step.icon className="w-5 h-5 sm:w-7 sm:h-7 text-primary" />
                     </div>
-                    <span className="block text-center mt-2 text-xs font-heading font-bold text-muted-foreground">
-                      {step.number}
+                    <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 text-[10px] font-heading font-bold text-primary bg-card px-2 py-0.5 rounded-full border border-primary/20">
+                      {String(i + 1).padStart(2, "0")}
                     </span>
                   </div>
-                  <div className="flex-1 flex flex-col justify-center">
-                    <h3 className="font-heading text-xl font-semibold mb-2">{step.title}</h3>
-                    <p className="text-xs uppercase tracking-widest text-primary/70">Flip to learn more</p>
-                  </div>
                 </div>
-                {/* Back */}
-                <div className="absolute inset-0 glass rounded-xl p-8 flex items-center [backface-visibility:hidden] [transform:rotateY(180deg)] border-primary/30">
-                  <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
+
+                {/* Content */}
+                <div className="glass rounded-xl p-6 sm:p-7 group-hover:border-primary/40 transition-colors">
+                  <p className="text-xs uppercase tracking-widest text-primary font-semibold mb-1">{step.day}</p>
+                  <h3 className="font-heading text-lg sm:text-xl font-semibold mb-3">{step.title}</h3>
+                  <div className="text-sm sm:text-base text-muted-foreground leading-relaxed">{step.body}</div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.li>
+            ))}
+          </ol>
         </div>
       </div>
     </section>
