@@ -4,6 +4,7 @@ import PromoOffer from "@/components/landing/PromoOffer";
 import Stats from "@/components/landing/Stats";
 import Services from "@/components/landing/Services";
 import Process from "@/components/landing/Process";
+import LogoMarquee from "@/components/landing/LogoMarquee";
 import Industries from "@/components/landing/Industries";
 import Testimonials from "@/components/landing/Testimonials";
 import ContactForm from "@/components/landing/ContactForm";
@@ -18,6 +19,7 @@ const Index = () => {
       <Stats />
       <Services />
       <Process />
+      <LogoMarquee />
       <Industries />
       <Testimonials />
       <ContactForm />
