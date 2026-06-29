@@ -83,7 +83,7 @@ const Process = () => {
                   </div>
                   <div className="flex-1 flex flex-col justify-center">
                     <h3 className="font-heading text-xl font-semibold mb-2">{step.title}</h3>
-                    <p className="text-xs uppercase tracking-widest text-primary/70">Click to learn more</p>
+                    <p className="text-xs uppercase tracking-widest text-primary/70">Flip to learn more</p>
                   </div>
                 </div>
                 {/* Back */}
