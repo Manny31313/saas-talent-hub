@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const verticals = [
   {
     name: "Startup",
-    specialties: "Seed to Series C, First Hire to First Team, Rapid Scaling",
+    specialties: "Series A–D, First Hire to First Team, then Rapid Scaling",
   },
   {
     name: "SMB",

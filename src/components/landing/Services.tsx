@@ -9,13 +9,18 @@ const services = [
   },
   {
     icon: Users,
-    title: "Revenue Team Hiring",
-    description: "AEs, SDRs, CSMs, and RevOps talent embedded in your pipeline within weeks, not months.",
+    title: "GTM",
+    description: "AEs, SDRs, and CSMs embedded in your pipeline within weeks, not months.",
   },
   {
     icon: BarChart2,
-    title: "Data Science Roles",
-    description: "Data scientists, ML engineers, and analytics leaders who turn raw data into business impact.",
+    title: "RevOps",
+    description: "RevOps leaders and analysts who architect the systems, reporting, and forecasting that scale revenue.",
+  },
+  {
+    icon: BarChart2,
+    title: "Data Operations",
+    description: "Data engineers, analysts, and ML talent who turn raw data into reliable business insight.",
   },
   {
     icon: UserCog,
@@ -45,7 +50,7 @@ const Services = () => {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
