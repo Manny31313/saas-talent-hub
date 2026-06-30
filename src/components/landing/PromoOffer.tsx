@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageSquare } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const CALENDLY_URL = "https://calendly.com/emmanuel-j-keezer/sync-w-saas-recruiting-co";
+const CALENDLY_URL = "https://calendly.com/saasrecruitingco/schedule";
 
 const PromoOffer = () => {
   return (
