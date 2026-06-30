@@ -5,8 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predev": "node scripts/fetch-logos.mjs",
     "build": "vite build",
+    "prebuild": "node scripts/fetch-logos.mjs",
     "build:dev": "vite build --mode development",
+    "prebuild:dev": "node scripts/fetch-logos.mjs",
+    "fetch:logos": "node scripts/fetch-logos.mjs --force",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",

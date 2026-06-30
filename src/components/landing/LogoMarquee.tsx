@@ -1,17 +1,18 @@
-// Logos sourced from vectorlogo.zone (ar21 variants include both icon + wordmark)
+// Logos are cached locally at build time by scripts/fetch-logos.mjs
+// (sourced from vectorlogo.zone ar21 variants — icon + wordmark)
 const logos = [
-  { name: "Stripe", src: "https://www.vectorlogo.zone/logos/stripe/stripe-ar21.svg" },
-  { name: "Notion", src: "https://www.vectorlogo.zone/logos/notion/notion-ar21.svg" },
-  { name: "Slack", src: "https://www.vectorlogo.zone/logos/slack/slack-ar21.svg" },
-  { name: "Figma", src: "https://www.vectorlogo.zone/logos/figma/figma-ar21.svg" },
-  { name: "Vercel", src: "https://www.vectorlogo.zone/logos/vercel/vercel-ar21.svg" },
-  { name: "HubSpot", src: "https://www.vectorlogo.zone/logos/hubspot/hubspot-ar21.svg" },
-  { name: "Datadog", src: "https://www.vectorlogo.zone/logos/datadoghq/datadoghq-ar21.svg" },
-  { name: "Snowflake", src: "https://www.vectorlogo.zone/logos/snowflake/snowflake-ar21.svg" },
-  { name: "Airtable", src: "https://www.vectorlogo.zone/logos/airtable/airtable-ar21.svg" },
-  { name: "Asana", src: "https://www.vectorlogo.zone/logos/asana/asana-ar21.svg" },
-  { name: "Segment", src: "https://www.vectorlogo.zone/logos/segment/segment-ar21.svg" },
-  { name: "GitHub", src: "https://www.vectorlogo.zone/logos/github/github-ar21.svg" },
+  { name: "Stripe", src: "/logos/stripe.svg" },
+  { name: "Shopify", src: "/logos/shopify.svg" },
+  { name: "Slack", src: "/logos/slack.svg" },
+  { name: "Figma", src: "/logos/figma.svg" },
+  { name: "Vercel", src: "/logos/vercel.svg" },
+  { name: "HubSpot", src: "/logos/hubspot.svg" },
+  { name: "Datadog", src: "/logos/datadog.svg" },
+  { name: "Snowflake", src: "/logos/snowflake.svg" },
+  { name: "Airtable", src: "/logos/airtable.svg" },
+  { name: "Asana", src: "/logos/asana.svg" },
+  { name: "Segment", src: "/logos/segment.svg" },
+  { name: "GitHub", src: "/logos/github.svg" },
 ];
 
 const LogoMarquee = () => {
