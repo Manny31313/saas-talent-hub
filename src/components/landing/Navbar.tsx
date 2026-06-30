@@ -10,7 +10,7 @@ import {
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 
-const CALENDLY_URL = "https://calendly.com/emmanuel-j-keezer/sync-w-saas-recruiting-co";
+const CALENDLY_URL = "https://calendly.com/saasrecruitingco/schedule";
 
 const LOCATIONS = [
   "U.S. (all cities)",
