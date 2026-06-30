@@ -74,7 +74,7 @@ const Navbar = () => {
 
         <Button variant="hero" size="sm" asChild>
           <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-            Let's Connect
+            Hire Talent
           </a>
         </Button>
       </div>

@@ -60,7 +60,7 @@ const ContactForm = () => {
       setIsSubmitting(false);
       toast({
         title: "Message sent!",
-        description: "We'll get back to you within 24 hours.",
+        description: "We'll respond within 24 hours.",
       });
       (e.target as HTMLFormElement).reset();
     }, 1000);
@@ -87,13 +87,19 @@ const ContactForm = () => {
             <div className="space-y-4 text-sm text-muted-foreground">
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary" />
-                <span>Typical response within 24 hours</span>
+                <span>Response within 24 hours</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary" />
                 <span>No upfront fees, we work on success</span>
               </div>
             </div>
+            <p className="mt-8 text-sm text-muted-foreground">
+              Candidates:{" "}
+              <Link to="/talent-network" className="text-primary font-medium hover:underline">
+                Apply here to join our talent network.
+              </Link>
+            </p>
           </motion.div>
 
           <motion.form
@@ -146,23 +152,22 @@ const ContactForm = () => {
                   <SelectValue placeholder="Select a category" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="sales">Sales (AE, SDR, Sales Leader)</SelectItem>
-                  <SelectItem value="cs">Customer Success / Support</SelectItem>
-                  <SelectItem value="marketing">Marketing / Growth</SelectItem>
                   <SelectItem value="revops">RevOps / Analytics</SelectItem>
                   <SelectItem value="executive">Executive (VP, C-Suite)</SelectItem>
+                  <SelectItem value="marketing">Marketing</SelectItem>
+                  <SelectItem value="sales">Sales (AE, SDR, Sales Leader)</SelectItem>
+                  <SelectItem value="cs">Customer Success / Support</SelectItem>
                   <SelectItem value="engineering">Engineering / Product</SelectItem>
-                  <SelectItem value="other">Other</SelectItem>
                 </SelectContent>
               </Select>
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm font-medium text-foreground">Tell us more</label>
+              <label className="text-sm font-medium text-foreground">Tell us about your hiring needs</label>
               <Textarea
                 required
                 name="message"
-                placeholder="Briefly describe your hiring needs, timeline, and any specifics..."
+                placeholder="I'm looking to hire a Director of Sales that must be based on the east coast."
                 maxLength={1000}
                 rows={4}
                 className="bg-secondary/50 border-border placeholder:text-muted-foreground/50 resize-none"
