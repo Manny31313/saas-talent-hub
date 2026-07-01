@@ -64,7 +64,7 @@ const testimonials = [
   },
   {
     quote:
-      "As an SDR looking to break into a bigger SaaS company, the team took the time to actually understand my career goals instead of just pushing me toward any open req. They coached me through every interview loop and helped me negotiate a comp package I didn't think was possible. I landed at a Series C company with real upward mobility. I recommend them to every rep I know.",
+      "As an SDR looking to break into a bigger SaaS company, this recruiting team took the time to actually understand my career goals instead of just pushing me toward any open req. They coached me through every interview loop and helped me negotiate a comp package I didn't think was possible. I landed at a Series C company with real upward mobility. I recommend them to every rep I know.",
     name: "Sofia Alvarez",
     title: "SDR, placed at a Series C SaaS company",
     image: sofiaImg,
