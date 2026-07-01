@@ -71,7 +71,7 @@ const testimonials = [
   },
   {
     quote:
-      "I was an AE at a stagnant company and needed a change without wasting cycles on bad-fit roles. Their team surfaced three legitimate opportunities in under two weeks, all aligned with my ICP and quota expectations. They prepped me hard for panel interviews and gave honest feedback throughout. I ended up at a top-of-market SaaS org with a 40% comp bump.",
+      "I was an AE at a stagnant company and needed a change without wasting cycles on bad-fit roles. This team surfaced three legitimate opportunities in under two weeks, all aligned with my ICP and quota expectations. They prepped me hard for panel interviews and gave honest feedback throughout. I ended up at a top-of-market SaaS org with a 40% comp bump.",
     name: "Tyler Brooks",
     title: "Account Executive, placed at an enterprise SaaS company",
     image: tylerImg,
