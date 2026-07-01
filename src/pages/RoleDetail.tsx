@@ -80,8 +80,8 @@ const RoleDetail = () => {
     // ============================================================
 
     const resumeNote = resumeFile ? `%0A%0AResume attached: ${resumeFile.name}` : "";
-    const mailtoLink = `mailto:keezerholdingsllc@gmail.com?subject=Application for ${role.title} - ${data.name}&body=Name: ${data.name}%0AEmail: ${data.email}%0APhone: ${data.phone || "N/A"}%0ALinkedIn: ${data.linkedin || "N/A"}%0ARole: ${role.title}%0ACompany: ${role.company}%0A%0ACover Letter:%0A${data.coverLetter}${resumeNote}`;
-    window.open(mailtoLink, "_blank");
+    const mailtoLink = `mailto:emmanuel.keezer@saasrecruitingco.com?subject=Application for ${role.title} - ${data.name}&body=Name: ${data.name}%0AEmail: ${data.email}%0APhone: ${data.phone || "N/A"}%0ALinkedIn: ${data.linkedin || "N/A"}%0ARole: ${role.title}%0ACompany: ${role.company}%0A%0ACover Letter:%0A${data.coverLetter}${resumeNote}`;
+    window.location.href = mailtoLink;
 
     setTimeout(() => {
       setIsSubmitting(false);

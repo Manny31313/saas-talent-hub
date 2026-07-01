@@ -26,8 +26,8 @@ const Candidates = () => {
       message: formData.get("message"),
     };
 
-    const mailtoLink = `mailto:keezerholdingsllc@gmail.com?subject=Candidate Submission from ${data.name}&body=Name: ${data.name}%0AEmail: ${data.email}%0APhone: ${data.phone}%0ALinkedIn: ${data.linkedin}%0ATarget Role: ${data.role}%0A%0ANote:%0A${data.message}%0A%0A(Please attach your resume to this email.)`;
-    window.open(mailtoLink, "_blank");
+    const mailtoLink = `mailto:emmanuel.keezer@saasrecruitingco.com?subject=Candidate Submission from ${data.name}&body=Name: ${data.name}%0AEmail: ${data.email}%0APhone: ${data.phone}%0ALinkedIn: ${data.linkedin}%0ATarget Role: ${data.role}%0A%0ANote:%0A${data.message}%0A%0A(Please attach your resume to this email.)`;
+    window.location.href = mailtoLink;
 
     setTimeout(() => {
       setIsSubmitting(false);
