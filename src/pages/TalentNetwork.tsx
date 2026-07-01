@@ -162,7 +162,7 @@ const TalentNetwork = () => {
                 <label className="text-sm font-medium text-foreground">Primary Discipline *</label>
                 <Select required name="discipline">
                   <SelectTrigger className="bg-secondary/50 border-border">
-                    <SelectValue placeholder="Select" />
+                    <SelectValue placeholder="Select" className="data-[placeholder]:text-muted-foreground/50" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="executive">Executive Leadership (VP, CRO, CMO, CTO)</SelectItem>
