@@ -94,12 +94,6 @@ const ContactForm = () => {
                 <span>No upfront fees, we work on success</span>
               </div>
             </div>
-            <p className="mt-8 text-sm text-muted-foreground">
-              Candidates:{" "}
-              <Link to="/talent-network" className="text-primary font-medium hover:underline">
-                Apply here to join our talent network.
-              </Link>
-            </p>
           </motion.div>
 
           <motion.form
