@@ -22,21 +22,21 @@ const tylerImg = unsplash("photo-1507003211169-0a1dd7228f2d");
 const testimonials = [
   {
     quote:
-      "They filled our entire AE team in under 30 days, and every hire has exceeded quota since onboarding. What sold us was the market map they delivered on day two, so we could see exactly who they were targeting and why. The vetting was rigorous, the communication was constant, and we never felt like just another client. Honestly, the best recruiting experience we've had as a company.",
+      "The SaaS Recruiting Co. helped us fill our entire AE team in under 30 days, and every hire has exceeded quota since onboarding. What sold us was the market map they delivered on day two, so we could see exactly who they were targeting and why. The vetting was rigorous, the communication was constant, and we never felt like just another client. Honestly, the best recruiting experience we've had as a company.",
     name: "Sarah Chen",
     title: "VP Sales, CloudStack",
     image: sarahImg,
   },
   {
     quote:
-      "Finally, a recruiter that actually understands SaaS sales motions and what 'good' looks like at each stage of growth. They pushed back on our spec in the right places and elevated the quality of the shortlist. Every candidate we interviewed was a legitimate contender, which is unheard of in this market. They've become our default partner for any senior GTM hire.",
+      "This team actually understands SaaS sales motions and what 'good' looks like at each stage of growth. They pushed back on our spec in the right places and elevated the quality of the shortlist. Every candidate we interviewed was a legitimate contender, which is unheard of in this market. They've become our default partner for any senior GTM hire.",
     name: "James Park",
     title: "HR Director, DataLoop",
     image: jamesImg,
   },
   {
     quote:
-      "Our Series B demanded fast, quality hires across both revenue and product, and their recruiting team delivered on both. They built fresh market maps for every role instead of recycling pipelines, which made a real difference. The 30-day onboarding check-in caught a misalignment early and saved us from a costly mis-hire. I'd recommend them to any founder scaling through hypergrowth.",
+      "Our Series B demanded fast, quality hires across both revenue and product, and the SaaS Recruiting Co. delivered on both. They built fresh market maps for every role instead of recycling pipelines, which made a real difference. The 30-day onboarding check-in caught a misalignment early and saved us from a costly mis-hire. I'd recommend them to any founder scaling through hypergrowth.",
     name: "Priya Mehta",
     title: "COO, Revenix",
     image: priyaImg,
@@ -50,28 +50,28 @@ const testimonials = [
   },
   {
     quote:
-      "I needed a VP of Marketing and a Head of CS hired in the same quarter, and they delivered both ahead of schedule. The strategy session at kickoff was the most thorough I've ever experienced from a search partner. Their transparency around comp benchmarks and candidate motivations gave us a real edge in closing offers. Truly a category-leading recruiting team.",
+      "I needed a VP of Marketing and a Head of CS hired in the same quarter, and this recruiting team delivered both ahead of schedule. The strategy session at kickoff was the most thorough I've ever experienced from a search partner. Their transparency around comp benchmarks and candidate motivations gave us a real edge in closing offers. Truly a category-leading recruiting team.",
     name: "Elena Ramirez",
     title: "Chief People Officer, Lumen SaaS",
     image: elenaImg,
   },
   {
     quote:
-      "The pay-for-results model gave us confidence to engage them on a critical engineering leadership search. Within two weeks we had a shortlist of candidates who were already excited about the company. They quarterbacked the entire process and gave us honest feedback at every step. We closed our new VP of Engineering at the top of our target band.",
+      "The pay-for-results model gave us confidence to engage the SaaS Recruiting Co. on a critical engineering leadership search. Within two weeks we had a shortlist of candidates who were already excited about the company. They quarterbacked the entire process and gave us honest feedback at every step. We closed our new VP of Engineering at the top of our target band.",
     name: "David Haddad",
     title: "CTO, Northwind Cloud",
     image: davidImg,
   },
   {
     quote:
-      "As an SDR looking to break into a bigger SaaS company, the team took the time to actually understand my career goals instead of just pushing me toward any open req. They coached me through every interview loop and helped me negotiate a comp package I didn't think was possible. I landed at a Series C company with real upward mobility. I recommend them to every rep I know.",
+      "As an SDR looking to break into a bigger SaaS company, this recruiting team took the time to actually understand my career goals instead of just pushing me toward any open req. They coached me through every interview loop and helped me negotiate a comp package I didn't think was possible. I landed at a Series C company with real upward mobility. I recommend them to every rep I know.",
     name: "Sofia Alvarez",
     title: "SDR, placed at a Series C SaaS company",
     image: sofiaImg,
   },
   {
     quote:
-      "I was an AE at a stagnant company and needed a change without wasting cycles on bad-fit roles. Their team surfaced three legitimate opportunities in under two weeks, all aligned with my ICP and quota expectations. They prepped me hard for panel interviews and gave honest feedback throughout. I ended up at a top-of-market SaaS org with a 40% comp bump.",
+      "I was an AE at a stagnant company and needed a change without wasting cycles on bad-fit roles. This team surfaced three legitimate opportunities in under two weeks, all aligned with my ICP and quota expectations. They prepped me hard for panel interviews and gave honest feedback throughout. I ended up at a top-of-market SaaS org with a 40% comp bump.",
     name: "Tyler Brooks",
     title: "Account Executive, placed at an enterprise SaaS company",
     image: tylerImg,
