@@ -29,7 +29,7 @@ const testimonials = [
   },
   {
     quote:
-      "Finally, a recruiter that actually understands SaaS sales motions and what 'good' looks like at each stage of growth. They pushed back on our spec in the right places and elevated the quality of the shortlist. Every candidate we interviewed was a legitimate contender, which is unheard of in this market. They've become our default partner for any senior GTM hire.",
+      "This team actually understands SaaS sales motions and what 'good' looks like at each stage of growth. They pushed back on our spec in the right places and elevated the quality of the shortlist. Every candidate we interviewed was a legitimate contender, which is unheard of in this market. They've become our default partner for any senior GTM hire.",
     name: "James Park",
     title: "HR Director, DataLoop",
     image: jamesImg,
