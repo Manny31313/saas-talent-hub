@@ -30,7 +30,7 @@ const steps = [
     icon: HeartHandshake,
     day: "Post-Hire",
     title: "30 Day Check-In",
-    body: "We don't just fill a role and leave. We check in with you and your new hire to confirm alignment, surface any early friction, and deliver actionable insights that refine future growth plans, compensation strategies, and the entire recruitment process for future hires.",
+    body: "We don't just fill a role and leave. We check in with you and your new hire to confirm alignment and deliver actionable insights that refine future growth plans, compensation strategies, and the entire recruitment process for future hires.",
   },
 ];
 
@@ -51,7 +51,7 @@ const Process = () => {
             </h2>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed self-end">
-            A high-velocity, 14-day sprint built on total market transparency and elite vetting. We don't recycle stale databases—we build fresh maps for your exact role, every single time.
+            A high-velocity, 14-day sprint built on total market transparency and elite vetting. We don't recycle stale databases - we build fresh maps for your exact role, every single time.
           </p>
         </motion.div>
 
