@@ -81,7 +81,7 @@ const TalentNetwork = () => {
               <div className="glass rounded-xl p-6 border border-border">
                 <Quote className="w-6 h-6 text-primary/70 mb-3" />
                 <p className="text-foreground/90 leading-relaxed text-sm mb-5">
-                  "The SaaS Recruiting Co. helped me land the biggest break of my career. They
+                  "This recruiting team helped me land the biggest break of my career. They
                   understood exactly what I wanted, advocated hard on my behalf, and kept me in
                   the loop the entire time. I couldn't recommend them more highly."
                 </p>
