@@ -53,8 +53,8 @@ const ContactForm = () => {
     // }
     // ============================================================
 
-    const mailtoLink = `mailto:keezerholdingsllc@gmail.com?subject=New Inquiry from ${data.name} at ${data.company}&body=Name: ${data.name}%0AEmail: ${data.email}%0ACompany: ${data.company}%0ARole Category: ${data.role}%0A%0AMessage:%0A${data.message}`;
-    window.open(mailtoLink, "_blank");
+    const mailtoLink = `mailto:emmanuel.keezer@saasrecruitingco.com?subject=New Inquiry from ${data.name} at ${data.company}&body=Name: ${data.name}%0AEmail: ${data.email}%0ACompany: ${data.company}%0ARole Category: ${data.role}%0A%0AMessage:%0A${data.message}`;
+    window.location.href = mailtoLink;
 
     setTimeout(() => {
       setIsSubmitting(false);
