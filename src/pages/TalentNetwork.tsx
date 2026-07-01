@@ -30,7 +30,7 @@ const TalentNetwork = () => {
       message: formData.get("message"),
     };
 
-    const subject = `Talent Network Application — ${data.name}`;
+    const subject = `Talent Network Application - ${data.name}`;
     const body =
       `Job Search Intent: ${data.intent}%0A` +
       `Name: ${data.name}%0A` +
@@ -60,7 +60,7 @@ const TalentNetwork = () => {
       <section className="pt-32 pb-16">
         <div className="container px-6">
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-start">
-            {/* Left — pitch + testimonial */}
+            {/* Left - pitch + testimonial */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -74,7 +74,7 @@ const TalentNetwork = () => {
               <p className="text-muted-foreground leading-relaxed mb-8">
                 A frictionless way to put yourself in front of the most ambitious Tech & SaaS
                 companies hiring right now. Tell us where you're at, and we'll surface the right
-                opportunities — whether you're actively searching or just open to the right move.
+                opportunities - whether you're actively searching or just open to the right move.
               </p>
 
               <div className="glass rounded-xl p-6 border border-border">
@@ -101,7 +101,7 @@ const TalentNetwork = () => {
               </div>
             </motion.div>
 
-            {/* Right — form */}
+            {/* Right - form */}
             <motion.form
               onSubmit={handleSubmit}
               initial={{ opacity: 0, x: 30 }}

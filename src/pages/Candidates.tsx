@@ -61,7 +61,7 @@ const Candidates = () => {
               <div className="space-y-4 text-sm text-muted-foreground">
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary" />
-                  <span>Confidential — your info is never shared without consent</span>
+                  <span>Confidential - your info is never shared without consent</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary" />

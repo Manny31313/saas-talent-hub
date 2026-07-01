@@ -30,7 +30,7 @@ const services = [
   {
     icon: Sparkles,
     title: "Other",
-    description: "Don't see the role you're hiring for? Chances are we still cover it — contact us to learn more.",
+    description: "Don't see the role you're hiring for? Chances are we still cover it - contact us to learn more.",
   },
 ];
 
