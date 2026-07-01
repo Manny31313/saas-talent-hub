@@ -57,7 +57,7 @@ const testimonials = [
   },
   {
     quote:
-      "The pay-for-results model gave us confidence to engage them on a critical engineering leadership search. Within two weeks we had a shortlist of candidates who were already excited about the company. They quarterbacked the entire process and gave us honest feedback at every step. We closed our new VP of Engineering at the top of our target band.",
+      "The pay-for-results model gave us confidence to engage the SaaS Recruiting Co. on a critical engineering leadership search. Within two weeks we had a shortlist of candidates who were already excited about the company. They quarterbacked the entire process and gave us honest feedback at every step. We closed our new VP of Engineering at the top of our target band.",
     name: "David Haddad",
     title: "CTO, Northwind Cloud",
     image: davidImg,
