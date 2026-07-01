@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Users, Target, BarChart2, UserCog } from "lucide-react";
+import { Users, Target, BarChart2, UserCog, Sparkles } from "lucide-react";
 
 const services = [
   {
@@ -9,23 +9,28 @@ const services = [
   },
   {
     icon: Users,
-    title: "GTM",
+    title: "GTM Hiring",
     description: "AEs, SDRs, and CSMs embedded in your pipeline within weeks, not months.",
   },
   {
     icon: BarChart2,
     title: "RevOps",
-    description: "RevOps leaders and analysts who architect the systems, reporting, and forecasting that scale revenue.",
+    description: "RevOps leaders and solution engineers who architect the systems, reporting, and forecasting that scale revenue.",
   },
   {
     icon: BarChart2,
-    title: "Data Operations",
+    title: "DevOps",
     description: "Data engineers, analysts, and ML talent who turn raw data into reliable business insight.",
   },
   {
     icon: UserCog,
     title: "People Operations",
     description: "HR, Talent, and People Ops professionals who scale culture and build high-performing teams.",
+  },
+  {
+    icon: Sparkles,
+    title: "Other",
+    description: "Don't see the role you're hiring for? Chances are we still cover it — contact us to learn more.",
   },
 ];
 
@@ -50,7 +55,7 @@ const Services = () => {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
