@@ -22,7 +22,7 @@ const tylerImg = unsplash("photo-1507003211169-0a1dd7228f2d");
 const testimonials = [
   {
     quote:
-      "They filled our entire AE team in under 30 days, and every hire has exceeded quota since onboarding. What sold us was the market map they delivered on day two, so we could see exactly who they were targeting and why. The vetting was rigorous, the communication was constant, and we never felt like just another client. Honestly, the best recruiting experience we've had as a company.",
+      "The SaaS Recruiting Co. helped us fill our entire AE team in under 30 days, and every hire has exceeded quota since onboarding. What sold us was the market map they delivered on day two, so we could see exactly who they were targeting and why. The vetting was rigorous, the communication was constant, and we never felt like just another client. Honestly, the best recruiting experience we've had as a company.",
     name: "Sarah Chen",
     title: "VP Sales, CloudStack",
     image: sarahImg,
