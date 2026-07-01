@@ -39,10 +39,7 @@ const TalentNetwork = () => {
       `LinkedIn: ${data.linkedin}%0A` +
       `Discipline: ${data.discipline}%0A%0A` +
       `Context:%0A${data.message}`;
-    window.open(
-      `mailto:keezerholdingsllc@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`,
-      "_blank",
-    );
+    window.location.href = `mailto:emmanuel.keezer@saasrecruitingco.com?subject=${encodeURIComponent(subject)}&body=${body}`;
 
     setTimeout(() => {
       setIsSubmitting(false);
