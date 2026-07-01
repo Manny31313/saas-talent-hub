@@ -13,11 +13,13 @@ import priyaImg from "@/assets/avatar-priya.jpg";
 import marcusImg from "@/assets/avatar-marcus.jpg";
 import elenaImg from "@/assets/avatar-elena.jpg";
 import davidImg from "@/assets/avatar-david.jpg";
+import sofiaImg from "@/assets/avatar-sofia.jpg";
+import tylerImg from "@/assets/avatar-tyler.jpg";
 
 const testimonials = [
   {
     quote:
-      "They filled our entire AE team in under 30 days, and every hire has exceeded quota since onboarding. What sold us was the market map they delivered on day two—we could see exactly who they were targeting and why. The vetting was rigorous, the communication was constant, and we never felt like just another client. Honestly, the best recruiting experience we've had as a company.",
+      "They filled our entire AE team in under 30 days, and every hire has exceeded quota since onboarding. What sold us was the market map they delivered on day two, so we could see exactly who they were targeting and why. The vetting was rigorous, the communication was constant, and we never felt like just another client. Honestly, the best recruiting experience we've had as a company.",
     name: "Sarah Chen",
     title: "VP Sales, CloudStack",
     image: sarahImg,
@@ -52,10 +54,24 @@ const testimonials = [
   },
   {
     quote:
-      "The pay-for-results model gave us confidence to engage them on a critical engineering leadership search. Within two weeks we had a shortlist of A-players who were already excited about the company. They quarterbacked the entire process and gave us honest feedback at every step. We closed our new VP of Engineering at the top of our target band.",
+      "The pay-for-results model gave us confidence to engage them on a critical engineering leadership search. Within two weeks we had a shortlist of candidates who were already excited about the company. They quarterbacked the entire process and gave us honest feedback at every step. We closed our new VP of Engineering at the top of our target band.",
     name: "David Haddad",
     title: "CTO, Northwind Cloud",
     image: davidImg,
+  },
+  {
+    quote:
+      "As an SDR looking to break into a bigger SaaS company, the team took the time to actually understand my career goals instead of just pushing me toward any open req. They coached me through every interview loop and helped me negotiate a comp package I didn't think was possible. I landed at a Series C company with real upward mobility. I recommend them to every rep I know.",
+    name: "Sofia Alvarez",
+    title: "SDR, placed at a Series C SaaS company",
+    image: sofiaImg,
+  },
+  {
+    quote:
+      "I was an AE at a stagnant company and needed a change without wasting cycles on bad-fit roles. Their team surfaced three legitimate opportunities in under two weeks, all aligned with my ICP and quota expectations. They prepped me hard for panel interviews and gave honest feedback throughout. I ended up at a top-of-market SaaS org with a 40% comp bump.",
+    name: "Tyler Brooks",
+    title: "Account Executive, placed at an enterprise SaaS company",
+    image: tylerImg,
   },
 ];
 

@@ -61,10 +61,10 @@ const Navbar = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="w-48">
               <DropdownMenuItem asChild>
-                <Link to="/candidates">Submit Resume Here</Link>
+                <Link to="/open-roles">Open Roles</Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link to="/open-roles">Open Roles</Link>
+                <Link to="/talent-network">Join Our Talent Network</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

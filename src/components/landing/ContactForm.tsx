@@ -94,12 +94,6 @@ const ContactForm = () => {
                 <span>No upfront fees, we work on success</span>
               </div>
             </div>
-            <p className="mt-8 text-sm text-muted-foreground">
-              Candidates:{" "}
-              <Link to="/talent-network" className="text-primary font-medium hover:underline">
-                Apply here to join our talent network.
-              </Link>
-            </p>
           </motion.div>
 
           <motion.form
@@ -167,7 +161,7 @@ const ContactForm = () => {
               <Textarea
                 required
                 name="message"
-                placeholder="I'm looking to hire a Director of Sales that must be based on the east coast."
+                placeholder="I'm looking to hire a Director of Sales that must be based in the east coast."
                 maxLength={1000}
                 rows={4}
                 className="bg-secondary/50 border-border placeholder:text-muted-foreground/50 resize-none"
@@ -184,6 +178,13 @@ const ContactForm = () => {
               {isSubmitting ? "Sending..." : "Send Inquiry"}
               <Send className="w-4 h-4 ml-1" />
             </Button>
+
+            <p className="text-center text-sm text-muted-foreground pt-2">
+              Candidates:{" "}
+              <Link to="/talent-network" className="text-primary font-medium hover:underline">
+                Click here to join our talent network.
+              </Link>
+            </p>
 
           </motion.form>
         </div>

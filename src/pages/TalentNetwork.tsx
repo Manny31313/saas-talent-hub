@@ -9,7 +9,7 @@ import { Send, Quote } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
-import avatarMarcus from "@/assets/avatar-marcus.jpg";
+import avatarHannah from "@/assets/avatar-hannah.jpg";
 
 const TalentNetwork = () => {
   const { toast } = useToast();
@@ -82,20 +82,20 @@ const TalentNetwork = () => {
                 <p className="text-foreground/90 leading-relaxed text-sm mb-5">
                   "The SaaS Recruiting Co. helped me land the biggest break of my career. They
                   understood exactly what I wanted, advocated hard on my behalf, and kept me in
-                  the loop the entire time."
+                  the loop the entire time. I couldn't recommend them more highly."
                 </p>
                 <div className="flex items-center gap-3 pt-4 border-t border-border">
                   <img
-                    src={avatarMarcus}
-                    alt="Marcus Johnson headshot"
+                    src={avatarHannah}
+                    alt="Hannah Whitfield headshot"
                     loading="lazy"
                     width={48}
                     height={48}
                     className="w-12 h-12 rounded-full object-cover border border-border"
                   />
                   <div>
-                    <div className="font-heading font-semibold text-sm">Marcus Johnson</div>
-                    <div className="text-xs text-muted-foreground">Placed candidate, now CRO</div>
+                    <div className="font-heading font-semibold text-sm">Hannah Whitfield</div>
+                    <div className="text-xs text-muted-foreground">Placed candidate, now VP Marketing</div>
                   </div>
                 </div>
               </div>
@@ -152,8 +152,8 @@ const TalentNetwork = () => {
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">LinkedIn Profile URL *</label>
-                <Input required name="linkedin" placeholder="linkedin.com/in/you" maxLength={200}
+                <label className="text-sm font-medium text-foreground">LinkedIn Profile URL</label>
+                <Input name="linkedin" placeholder="linkedin.com/in/you" maxLength={200}
                   className="bg-secondary/50 border-border placeholder:text-muted-foreground/50" />
               </div>
 
