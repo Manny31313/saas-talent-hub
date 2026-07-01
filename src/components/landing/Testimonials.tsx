@@ -50,7 +50,7 @@ const testimonials = [
   },
   {
     quote:
-      "I needed a VP of Marketing and a Head of CS hired in the same quarter, and they delivered both ahead of schedule. The strategy session at kickoff was the most thorough I've ever experienced from a search partner. Their transparency around comp benchmarks and candidate motivations gave us a real edge in closing offers. Truly a category-leading recruiting team.",
+      "I needed a VP of Marketing and a Head of CS hired in the same quarter, and this recruiting team delivered both ahead of schedule. The strategy session at kickoff was the most thorough I've ever experienced from a search partner. Their transparency around comp benchmarks and candidate motivations gave us a real edge in closing offers. Truly a category-leading recruiting team.",
     name: "Elena Ramirez",
     title: "Chief People Officer, Lumen SaaS",
     image: elenaImg,
