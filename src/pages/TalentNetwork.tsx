@@ -9,7 +9,8 @@ import { Send, Quote } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
-import avatarHannah from "@/assets/avatar-hannah.jpg";
+// Real, free-to-use professional portrait from Unsplash (Unsplash License).
+const avatarHannah = "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=facearea&facepad=2.5&w=400&h=400&q=80";
 
 const TalentNetwork = () => {
   const { toast } = useToast();
