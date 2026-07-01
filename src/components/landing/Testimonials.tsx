@@ -36,7 +36,7 @@ const testimonials = [
   },
   {
     quote:
-      "Our Series B demanded fast, quality hires across both revenue and product, and their recruiting team delivered on both. They built fresh market maps for every role instead of recycling pipelines, which made a real difference. The 30-day onboarding check-in caught a misalignment early and saved us from a costly mis-hire. I'd recommend them to any founder scaling through hypergrowth.",
+      "Our Series B demanded fast, quality hires across both revenue and product, and the SaaS Recruiting Co. delivered on both. They built fresh market maps for every role instead of recycling pipelines, which made a real difference. The 30-day onboarding check-in caught a misalignment early and saved us from a costly mis-hire. I'd recommend them to any founder scaling through hypergrowth.",
     name: "Priya Mehta",
     title: "COO, Revenix",
     image: priyaImg,
