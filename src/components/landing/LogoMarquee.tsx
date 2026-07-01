@@ -1,5 +1,5 @@
 // Logos are cached locally at build time by scripts/fetch-logos.mjs
-// (sourced from vectorlogo.zone ar21 variants — icon + wordmark)
+// (sourced from vectorlogo.zone ar21 variants - icon + wordmark)
 const logos = [
   { name: "Stripe", src: "/logos/stripe.svg" },
   { name: "Shopify", src: "/logos/shopify.svg" },

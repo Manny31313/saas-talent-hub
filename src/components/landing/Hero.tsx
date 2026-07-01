@@ -10,7 +10,7 @@ const Hero = () => {
 
       <div className="container relative z-10 px-6 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left — Text */}
+          {/* Left - Text */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
@@ -27,7 +27,7 @@ const Hero = () => {
             </p>
           </motion.div>
 
-          {/* Right — Image */}
+          {/* Right - Image */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
