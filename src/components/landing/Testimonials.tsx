@@ -7,14 +7,17 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import sarahImg from "@/assets/avatar-sarah.jpg";
-import jamesImg from "@/assets/avatar-james.jpg";
-import priyaImg from "@/assets/avatar-priya.jpg";
-import marcusImg from "@/assets/avatar-marcus.jpg";
-import elenaImg from "@/assets/avatar-elena.jpg";
-import davidImg from "@/assets/avatar-david.jpg";
-import sofiaImg from "@/assets/avatar-sofia.jpg";
-import tylerImg from "@/assets/avatar-tyler.jpg";
+// Real, free-to-use professional portraits sourced from Unsplash (Unsplash License).
+const unsplash = (id: string) =>
+  `https://images.unsplash.com/${id}?auto=format&fit=facearea&facepad=2.5&w=400&h=400&q=80`;
+const sarahImg = unsplash("photo-1573496359142-b8d87734a5a2");
+const jamesImg = unsplash("photo-1560250097-0b93528c311a");
+const priyaImg = unsplash("photo-1580489944761-15a19d654956");
+const marcusImg = unsplash("photo-1519085360753-af0119f7cbe7");
+const elenaImg = unsplash("photo-1544005313-94ddf0286df2");
+const davidImg = unsplash("photo-1500648767791-00dcc994a43e");
+const sofiaImg = unsplash("photo-1438761681033-6461ffad8d80");
+const tylerImg = unsplash("photo-1507003211169-0a1dd7228f2d");
 
 const testimonials = [
   {
