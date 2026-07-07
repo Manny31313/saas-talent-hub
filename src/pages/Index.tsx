@@ -14,13 +14,8 @@ import Footer from "@/components/landing/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <div className="relative overflow-hidden rounded-2xl border-2 border-[hsl(var(--hero-border))] bg-[hsl(var(--hero-deep))] mx-4 sm:mx-6 lg:mx-8 mt-4 sm:mt-6 lg:mt-8">
-        <div className="absolute inset-0 bg-[hsl(var(--hero-glass-tint))] backdrop-blur-[12px] pointer-events-none" />
-        <div className="relative z-10">
-          <Navbar dark />
-          <Hero />
-        </div>
-      </div>
+      <Navbar />
+      <Hero />
       <PromoOffer />
       <LogoMarquee />
       <Stats />
@@ -34,6 +29,5 @@ const Index = () => {
     </div>
   );
 };
-
 
 export default Index;
