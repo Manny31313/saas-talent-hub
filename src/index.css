@@ -84,25 +84,3 @@
     @apply bg-card/70 backdrop-blur-xl border border-border;
   }
 }
-
-@layer utilities {
-  .grid-bg {
-    background-image:
-      linear-gradient(hsl(var(--primary) / 0.12) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--primary) / 0.12) 1px, transparent 1px);
-    background-size: 32px 32px;
-    animation: grid-move 18s linear infinite;
-  }
-  .grid-bg-dark {
-    background-image:
-      linear-gradient(hsl(44 38% 94% / 0.08) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(44 38% 94% / 0.08) 1px, transparent 1px);
-    background-size: 40px 40px;
-    animation: grid-move 22s linear infinite;
-  }
-}
-
-@keyframes grid-move {
-  from { background-position: 0 0; }
-  to { background-position: 32px 32px; }
-}
