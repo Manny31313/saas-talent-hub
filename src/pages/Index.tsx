@@ -15,8 +15,12 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <Hero />
-      <PromoOffer />
+      <div className="container px-4 sm:px-6 pt-24">
+        <div className="rounded-3xl border-2 border-primary/30 overflow-hidden bg-background shadow-sm">
+          <Hero />
+          <PromoOffer />
+        </div>
+      </div>
       <LogoMarquee />
       <Stats />
       <Services />
@@ -25,6 +29,7 @@ const Index = () => {
       <WhyChoose />
       <Testimonials />
       <ContactForm />
+      <BottomCTA />
       <Footer />
     </div>
   );
