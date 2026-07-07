@@ -52,7 +52,13 @@
     --sidebar-accent-foreground: 145 40% 15%;
     --sidebar-border: 44 20% 82%;
     --sidebar-ring: 145 55% 18%;
+
+    /* Hero dark frosted glass theme */
+    --hero-deep: 145 40% 10%;
+    --hero-glass-tint: 160 84% 39% / 0.05;
+    --hero-border: 160 60% 55% / 0.35;
   }
+
 }
 
 @layer base {
