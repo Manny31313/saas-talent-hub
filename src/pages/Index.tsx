@@ -15,17 +15,8 @@ const Index = () => {
   return (
     <div className="relative min-h-screen">
       <Navbar />
-
-      {/* Ambient glow limited to the top of the page, ending just above the logo marquee */}
-      <div className="relative">
-        <div
-          className="absolute inset-0 -z-10"
-          style={{ backgroundImage: "var(--gradient-page)" }}
-        />
-        <Hero />
-        <PromoOffer />
-      </div>
-
+      <Hero />
+      <PromoOffer />
       <LogoMarquee />
       <Stats />
       <Services />
