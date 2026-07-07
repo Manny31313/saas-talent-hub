@@ -71,11 +71,14 @@ const Process = () => {
                 <div className="absolute left-0 top-0 w-12 h-12 rounded-full bg-card border-2 border-primary/40 flex items-center justify-center">
                   <step.icon className="w-5 h-5 text-primary" />
                 </div>
-                <div className="glass rounded-xl p-5">
+                <motion.div
+                  whileHover={{ scale: 1.03, y: -6, transition: { duration: 0.2 } }}
+                  className="glass rounded-xl p-5 ambient-glow cursor-pointer transition-colors"
+                >
                   <p className="text-xs uppercase tracking-widest text-primary font-semibold mb-1">{step.day}</p>
                   <h3 className="font-heading text-base font-semibold mb-2">{step.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{step.body}</p>
-                </div>
+                </motion.div>
               </motion.li>
             ))}
           </ol>
