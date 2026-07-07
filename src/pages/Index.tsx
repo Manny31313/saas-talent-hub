@@ -15,12 +15,8 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <div className="pt-20 px-4 sm:px-6">
-        <div className="container mx-auto rounded-3xl border-2 border-primary/60 bg-primary text-primary-foreground overflow-hidden shadow-2xl shadow-primary/20">
-          <Hero />
-          <PromoOffer />
-        </div>
-      </div>
+      <Hero />
+      <PromoOffer />
       <LogoMarquee />
       <Stats />
       <Services />
