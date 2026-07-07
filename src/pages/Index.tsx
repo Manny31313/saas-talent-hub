@@ -9,6 +9,7 @@ import Industries from "@/components/landing/Industries";
 import WhyChoose from "@/components/landing/WhyChoose";
 import Testimonials from "@/components/landing/Testimonials";
 import ContactForm from "@/components/landing/ContactForm";
+import BottomCTA from "@/components/landing/BottomCTA";
 import Footer from "@/components/landing/Footer";
 
 const Index = () => {
