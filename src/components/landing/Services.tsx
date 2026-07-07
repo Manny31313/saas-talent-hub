@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useRef } from "react";
 import { Users, Target, BarChart2, UserCog, Sparkles } from "lucide-react";
 
 const services = [
