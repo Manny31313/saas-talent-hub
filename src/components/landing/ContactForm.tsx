@@ -1,70 +1,17 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Send, ArrowRight } from "lucide-react";
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+
+const CALENDLY_URL = "https://calendly.com/saasrecruitingco/schedule";
 
 const ContactForm = () => {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    const formData = new FormData(e.currentTarget);
-    const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      company: formData.get("company"),
-      role: formData.get("role"),
-      message: formData.get("message"),
-    };
-
-    // ============================================================
-    // ATS INTEGRATION PLACEHOLDER
-    // Uncomment and configure when ready to connect your ATS.
-    //
-    // const ATS_CONFIG = {
-    //   ashby: {
-    //     apiEndpoint: "https://api.ashbyhq.com/candidate.create",
-    //     apiKey: "",  // Set via environment variable
-    //   },
-    //   greenhouse: {
-    //     apiEndpoint: "https://harvest.greenhouse.io/v1/candidates",
-    //     apiKey: "",  // Set via environment variable
-    //   },
-    // };
-    //
-    // async function submitToATS(candidate: typeof data) {
-    //   const response = await fetch(ATS_CONFIG.ashby.apiEndpoint, {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //       "Authorization": `Bearer ${ATS_CONFIG.ashby.apiKey}`,
-    //     },
-    //     body: JSON.stringify(candidate),
-    //   });
-    //   return response.json();
-    // }
-    // ============================================================
-
-    const mailtoLink = `mailto:emmanuel.keezer@saasrecruitingco.com?subject=New Inquiry from ${data.name} at ${data.company}&body=Name: ${data.name}%0AEmail: ${data.email}%0ACompany: ${data.company}%0ARole Category: ${data.role}%0A%0AMessage:%0A${data.message}`;
-    window.location.href = mailtoLink;
-
-    setTimeout(() => {
-      setIsSubmitting(false);
-      toast({
-        title: "Message sent!",
-        description: "We'll respond within 24 hours.",
-      });
-      (e.target as HTMLFormElement).reset();
-    }, 1000);
-  };
+  useEffect(() => {
+    const scriptSrc = "https://assets.calendly.com/assets/external/widget.js";
+    if (document.querySelector(`script[src="${scriptSrc}"]`)) return;
+    const script = document.createElement("script");
+    script.src = scriptSrc;
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
 
   return (
     <section className="py-14 border-t border-border" id="contact">
@@ -96,97 +43,19 @@ const ContactForm = () => {
             </div>
           </motion.div>
 
-          <motion.form
-            onSubmit={handleSubmit}
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="glass rounded-xl p-6 sm:p-8 space-y-5"
+            className="glass rounded-xl overflow-hidden"
           >
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Name</label>
-                <Input
-                  required
-                  name="name"
-                  placeholder="Your name"
-                  maxLength={100}
-                  className="bg-secondary/50 border-border placeholder:text-muted-foreground/50"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Email</label>
-                <Input
-                  required
-                  name="email"
-                  type="email"
-                  placeholder="you@company.com"
-                  maxLength={255}
-                  className="bg-secondary/50 border-border placeholder:text-muted-foreground/50"
-                />
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <label className="text-sm font-medium text-foreground">Company</label>
-              <Input
-                required
-                name="company"
-                placeholder="Your company name"
-                maxLength={150}
-                className="bg-secondary/50 border-border placeholder:text-muted-foreground/50"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <label className="text-sm font-medium text-foreground">What role(s) are you hiring for?</label>
-              <Select required name="role">
-                <SelectTrigger className="bg-secondary/50 border-border">
-                  <SelectValue placeholder="Select a category" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="revops">RevOps / Analytics</SelectItem>
-                  <SelectItem value="executive">Executive (VP, C-Suite)</SelectItem>
-                  <SelectItem value="marketing">Marketing</SelectItem>
-                  <SelectItem value="sales">Sales (AE, SDR, Sales Leader)</SelectItem>
-                  <SelectItem value="cs">Customer Success / Support</SelectItem>
-                  <SelectItem value="engineering">Engineering / Product</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-
-            <div className="space-y-2">
-              <label className="text-sm font-medium text-foreground">Tell us about your hiring needs</label>
-              <Textarea
-                required
-                name="message"
-                placeholder="I'm looking to hire a Director of Sales that must be based in the east coast."
-                maxLength={1000}
-                rows={4}
-                className="bg-secondary/50 border-border placeholder:text-muted-foreground/50 resize-none"
-              />
-            </div>
-
-            <Button
-              type="submit"
-              variant="hero"
-              size="lg"
-              className="w-full text-base py-6"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? "Sending..." : "Send Inquiry"}
-              <Send className="w-4 h-4 ml-1" />
-            </Button>
-
-            <p className="text-center text-sm text-muted-foreground pt-2">
-              Candidates:{" "}
-              <Link to="/talent-network" className="text-primary font-medium hover:underline">
-                Click here to join our talent network.
-              </Link>
-            </p>
-
-          </motion.form>
+            <div
+              className="calendly-inline-widget w-full"
+              data-url={`${CALENDLY_URL}?hide_gdpr_banner=1&background_color=f6f1e4&text_color=1a2e1f&primary_color=1a4d2e`}
+              style={{ minWidth: "320px", height: "700px" }}
+            />
+          </motion.div>
         </div>
       </div>
     </section>
