@@ -44,6 +44,12 @@
     --gradient-card: linear-gradient(180deg, hsl(44 30% 97%), hsl(44 25% 93%));
     --gradient-glow: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), hsl(145 55% 18% / 0.08), transparent 40%);
 
+    /* RelayDemand-style ambient page glow: soft tinted backdrop with a strong
+       bottom-left radial bleed in the primary color. */
+    --gradient-page: radial-gradient(1200px 900px at 0% 100%, hsl(145 55% 18% / 0.55), transparent 60%),
+                     radial-gradient(900px 700px at 100% 0%, hsl(145 45% 30% / 0.18), transparent 65%),
+                     linear-gradient(180deg, hsl(44 45% 96%), hsl(44 38% 92%));
+
     --sidebar-background: 44 30% 97%;
     --sidebar-foreground: 145 35% 12%;
     --sidebar-primary: 145 55% 18%;
