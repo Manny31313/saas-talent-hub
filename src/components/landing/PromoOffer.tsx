@@ -13,7 +13,7 @@ const PromoOffer = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative rounded-2xl border border-border bg-primary/5 p-12 sm:p-16 text-center overflow-hidden"
+          className="relative rounded-2xl border border-primary/20 bg-primary/5 p-12 sm:p-16 text-center overflow-hidden"
         >
           <div className="absolute inset-0 bg-[var(--gradient-hero)] opacity-50" />
           <div className="relative z-10">
