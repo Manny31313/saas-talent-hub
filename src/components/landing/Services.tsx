@@ -63,13 +63,17 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="group glass rounded-xl p-6 hover:border-primary/30 transition-colors"
+              className="group relative overflow-hidden glass rounded-xl p-6 border border-border hover:border-primary/40 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-primary/10"
             >
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                <service.icon className="w-6 h-6 text-primary" />
+              <div className="absolute inset-0 grid-bg opacity-70 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-br from-background/60 via-background/40 to-background/70 pointer-events-none" />
+              <div className="relative z-10">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                  <service.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-heading text-lg font-semibold mb-2">{service.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
               </div>
-              <h3 className="font-heading text-lg font-semibold mb-2">{service.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
             </motion.div>
           ))}
         </div>

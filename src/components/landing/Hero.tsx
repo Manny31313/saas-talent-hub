@@ -4,7 +4,7 @@ import heroImage from "@/assets/hero-team.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative flex items-center overflow-hidden pt-24 pb-8">
+    <section className="relative flex items-center overflow-hidden pt-10 pb-8 bg-background">
       <div className="absolute inset-0 bg-[var(--gradient-hero)]" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-primary/5 blur-3xl" />
 
