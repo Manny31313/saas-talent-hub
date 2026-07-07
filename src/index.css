@@ -44,6 +44,12 @@
     --gradient-card: linear-gradient(180deg, hsl(44 30% 97%), hsl(44 25% 93%));
     --gradient-glow: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), hsl(145 55% 18% / 0.08), transparent 40%);
 
+    /* RelayDemand-style ambient page glow: soft tinted backdrop with a strong
+       bottom-left radial bleed in the primary color. */
+    --gradient-page: radial-gradient(1200px 900px at 0% 100%, hsl(145 55% 18% / 0.55), transparent 60%),
+                     radial-gradient(900px 700px at 100% 0%, hsl(145 45% 30% / 0.18), transparent 65%),
+                     linear-gradient(180deg, hsl(44 45% 96%), hsl(44 38% 92%));
+
     --sidebar-background: 44 30% 97%;
     --sidebar-foreground: 145 35% 12%;
     --sidebar-primary: 145 55% 18%;
@@ -52,13 +58,7 @@
     --sidebar-accent-foreground: 145 40% 15%;
     --sidebar-border: 44 20% 82%;
     --sidebar-ring: 145 55% 18%;
-
-    /* Hero dark frosted glass theme */
-    --hero-deep: 145 40% 10%;
-    --hero-glass-tint: 160 84% 39% / 0.05;
-    --hero-border: 160 60% 55% / 0.35;
   }
-
 }
 
 @layer base {
@@ -69,6 +69,10 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
+    background-image: var(--gradient-page);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -82,11 +86,6 @@
     background-image: linear-gradient(135deg, hsl(145 55% 18%), hsl(145 50% 30%));
   }
 
-  .text-gradient-light {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(145 55% 95%), hsl(145 60% 80%));
-  }
-
   .border-glow {
     border-color: hsl(145 55% 18% / 0.25);
   }
@@ -95,4 +94,3 @@
     @apply bg-card/70 backdrop-blur-xl border border-border;
   }
 }
-
