@@ -91,6 +91,6 @@
   }
 
   .ambient-glow {
-    box-shadow: 0 0 30px -12px hsl(var(--primary) / 0.12);
+    box-shadow: 0 0 48px -8px hsl(var(--primary) / 0.22);
   }
 }
