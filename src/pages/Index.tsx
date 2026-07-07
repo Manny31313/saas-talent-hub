@@ -15,15 +15,8 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <div className="border-2 border-primary/40 rounded-none overflow-hidden">
-        <div className="relative bg-primary/10 backdrop-blur-xl">
-          <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,hsl(var(--primary)/0.15),transparent_70%)]" />
-          <div className="relative">
-            <Hero />
-          </div>
-        </div>
-        <PromoOffer />
-      </div>
+      <Hero />
+      <PromoOffer />
       <LogoMarquee />
       <Stats />
       <Services />
