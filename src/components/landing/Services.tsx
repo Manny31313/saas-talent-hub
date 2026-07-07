@@ -63,13 +63,17 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="group glass rounded-xl p-6 hover:border-primary/30 transition-colors"
+              className="group relative overflow-hidden glass rounded-xl p-6 transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 hover:border-primary/40"
             >
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+              <div
+                aria-hidden
+                className="absolute inset-0 opacity-40 group-hover:opacity-70 transition-opacity duration-500 [background-image:linear-gradient(hsl(var(--primary)/0.12)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--primary)/0.12)_1px,transparent_1px)] [background-size:28px_28px] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_85%)] animate-[marquee_60s_linear_infinite]"
+              />
+              <div className="relative w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                 <service.icon className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="font-heading text-lg font-semibold mb-2">{service.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
+              <h3 className="relative font-heading text-lg font-semibold mb-2">{service.title}</h3>
+              <p className="relative text-sm text-muted-foreground leading-relaxed">{service.description}</p>
             </motion.div>
           ))}
         </div>
