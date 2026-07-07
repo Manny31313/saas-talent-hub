@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const stats = [
   { value: "96%", label: "Retention Rate (12mo)" },
   { value: "18", label: "Average Days to Hire" },
-  { value: "200+", label: "SaaS Partners" },
+  { value: "100+", label: "SaaS Partners" },
 ];
 
 const Stats = () => {
