@@ -48,7 +48,7 @@ const ContactForm = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="glass rounded-xl overflow-hidden"
+            className="glass rounded-xl overflow-hidden ambient-glow"
           >
             <div
               className="calendly-inline-widget w-full"
