@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { Briefcase, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import {
@@ -9,6 +10,11 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
+
+interface NavbarProps {
+  dark?: boolean;
+}
+
 
 const CALENDLY_URL = "https://calendly.com/saasrecruitingco/schedule";
 
