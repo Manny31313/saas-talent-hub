@@ -13,14 +13,14 @@ const PromoOffer = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative rounded-2xl border border-primary/20 bg-primary/5 p-12 sm:p-16 text-center overflow-hidden"
+          className="relative rounded-2xl border border-primary/40 bg-primary p-12 sm:p-16 text-center overflow-hidden text-primary-foreground"
         >
-          <div className="absolute inset-0 bg-[var(--gradient-hero)] opacity-50" />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-accent opacity-90" />
           <div className="relative z-10">
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-6">
-              No upfront fees. <span className="text-gradient">Only pay for results.</span>
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-6 text-primary-foreground">
+              No upfront fees. <span className="text-white/95 italic">Only pay for results.</span>
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto mb-8 text-lg leading-relaxed">
+            <p className="text-primary-foreground/90 max-w-2xl mx-auto mb-8 text-lg leading-relaxed">
               We're so confident in our ability to deliver quality talent that you only pay when we make a successful placement. No contracts, no commitments, just a chance to earn your business. Let us prove what we can do.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
