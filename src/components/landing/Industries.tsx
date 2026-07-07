@@ -74,7 +74,7 @@ const Industries = () => {
               >
                 {/* Branch line down to card */}
                 <div className="w-px h-8 bg-primary/40" aria-hidden="true" />
-                <div className="rounded-xl p-5 w-full text-center bg-card border border-border transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl hover:shadow-primary/15 hover:border-primary/40">
+                <div className="glass rounded-xl p-5 w-full text-center hover:border-primary/40 transition-colors">
                   <h3 className="font-heading font-semibold text-base sm:text-lg text-primary mb-1.5">
                     {v.name}
                   </h3>

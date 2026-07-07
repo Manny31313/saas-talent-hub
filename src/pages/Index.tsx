@@ -9,14 +9,15 @@ import Industries from "@/components/landing/Industries";
 import WhyChoose from "@/components/landing/WhyChoose";
 import Testimonials from "@/components/landing/Testimonials";
 import ContactForm from "@/components/landing/ContactForm";
+import BottomCTA from "@/components/landing/BottomCTA";
 import Footer from "@/components/landing/Footer";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <div className="pt-20 px-4 sm:px-6">
-        <div className="container mx-auto rounded-3xl border-2 border-primary/60 bg-primary text-primary-foreground overflow-hidden shadow-2xl shadow-primary/20">
+      <div className="container px-4 sm:px-6 pt-24">
+        <div className="rounded-3xl border-2 border-primary/30 overflow-hidden bg-background shadow-sm">
           <Hero />
           <PromoOffer />
         </div>
@@ -29,6 +30,7 @@ const Index = () => {
       <WhyChoose />
       <Testimonials />
       <ContactForm />
+      <BottomCTA />
       <Footer />
     </div>
   );

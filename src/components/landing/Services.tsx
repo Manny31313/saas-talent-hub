@@ -35,12 +35,6 @@ const services = [
 ];
 
 const Services = () => {
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    e.currentTarget.style.setProperty("--mouse-x", `${e.clientX - rect.left}px`);
-    e.currentTarget.style.setProperty("--mouse-y", `${e.clientY - rect.top}px`);
-  };
-
   return (
     <section className="py-14" id="services">
       <div className="container px-6">
@@ -69,16 +63,10 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              onMouseMove={handleMouseMove}
-              className="group relative overflow-hidden rounded-xl p-6 bg-card border border-border transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl hover:shadow-primary/15 hover:border-primary/40"
+              className="group relative overflow-hidden glass rounded-xl p-6 border border-border hover:border-primary/40 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-primary/10"
             >
-              <div
-                className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                style={{
-                  background:
-                    "radial-gradient(400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), hsl(var(--primary) / 0.12), transparent 60%)",
-                }}
-              />
+              <div className="absolute inset-0 grid-bg opacity-70 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-br from-background/60 via-background/40 to-background/70 pointer-events-none" />
               <div className="relative z-10">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                   <service.icon className="w-6 h-6 text-primary" />

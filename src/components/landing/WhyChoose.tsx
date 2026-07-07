@@ -48,7 +48,7 @@ const WhyChoose = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.5 }}
-              className="rounded-xl p-6 bg-card border border-border transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl hover:shadow-primary/15 hover:border-primary/40"
+              className="glass rounded-xl p-6 border border-border hover:border-primary/30 transition-colors"
             >
               <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                 <p.icon className="w-6 h-6 text-primary" />

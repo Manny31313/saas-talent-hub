@@ -71,7 +71,7 @@ const Process = () => {
                 <div className="absolute left-0 top-0 w-12 h-12 rounded-full bg-card border-2 border-primary/40 flex items-center justify-center">
                   <step.icon className="w-5 h-5 text-primary" />
                 </div>
-                <div className="rounded-xl p-5 bg-card border border-border transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl hover:shadow-primary/15 hover:border-primary/40">
+                <div className="glass rounded-xl p-5">
                   <p className="text-xs uppercase tracking-widest text-primary font-semibold mb-1">{step.day}</p>
                   <h3 className="font-heading text-base font-semibold mb-2">{step.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{step.body}</p>
