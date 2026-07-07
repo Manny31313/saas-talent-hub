@@ -22,7 +22,7 @@ const tylerImg = unsplash("photo-1507003211169-0a1dd7228f2d");
 const testimonials = [
   {
     quote:
-      "The SaaS Recruiting Co. helped us fill our entire AE team in under 30 days, and every hire has exceeded quota since onboarding. What sold us was the market map they delivered on day two, so we could see exactly who they were targeting and why. The vetting was rigorous, the communication was constant, and we never felt like just another client. Honestly, the best recruiting experience we've had as a company.",
+      "The recruiting team helped us fill our entire AE team in under 30 days, and every hire has exceeded quota since onboarding. What sold us was the market map they delivered on day two, so we could see exactly who they were targeting and why. The vetting was rigorous, the communication was constant, and we never felt like just another client. Honestly, the best recruiting experience we've had as a company.",
     name: "Sarah Chen",
     title: "VP Sales, CloudStack",
     image: sarahImg,
@@ -36,14 +36,14 @@ const testimonials = [
   },
   {
     quote:
-      "Our Series B demanded fast, quality hires across both revenue and product, and the SaaS Recruiting Co. delivered on both. They built fresh market maps for every role instead of recycling pipelines, which made a real difference. The 30-day onboarding check-in caught a misalignment early and saved us from a costly mis-hire. I'd recommend them to any founder scaling through hypergrowth.",
+      "Our Series B demanded fast, quality hires across both revenue and product, and this team delivered on both. They built fresh market maps for every role instead of recycling pipelines, which made a real difference. The 30-day onboarding check-in caught a misalignment early and saved us from a costly mis-hire. I'd recommend them to any founder scaling through hypergrowth.",
     name: "Priya Mehta",
     title: "COO, Revenix",
     image: priyaImg,
   },
   {
     quote:
-      "We tried three other agencies before working with the SaaS Recruiting Co. and the difference was immediate. They actually understood the technical nuances of the RevOps and Data roles we were hiring for. Their candidates were sharper, better prepared, and far more aligned with our culture. Two of them are now leading entire functions inside our org.",
+      "We tried three other agencies before working with SRC and the difference was immediate. They actually understood the technical nuances of the RevOps and Data roles we were hiring for. Their candidates were sharper, better prepared, and far more aligned with our culture. Two of them are now leading entire functions inside our org.",
     name: "Marcus Johnson",
     title: "CRO, Vector Analytics",
     image: marcusImg,
@@ -57,7 +57,7 @@ const testimonials = [
   },
   {
     quote:
-      "The pay-for-results model gave us confidence to engage the SaaS Recruiting Co. on a critical engineering leadership search. Within two weeks we had a shortlist of candidates who were already excited about the company. They quarterbacked the entire process and gave us honest feedback at every step. We closed our new VP of Engineering at the top of our target band.",
+      "The pay-for-results model gave us confidence to engage this recruiting team on a critical engineering leadership search. Within two weeks we had a shortlist of candidates who were already excited about the company. They quarterbacked the entire process and gave us honest feedback at every step. We closed our new VP of Engineering at the top of our target band.",
     name: "David Haddad",
     title: "CTO, Northwind Cloud",
     image: davidImg,
