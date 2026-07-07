@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "500+", label: "Placements Made" },
   { value: "96%", label: "Retention Rate (12mo)" },
   { value: "18", label: "Average Days to Hire" },
   { value: "200+", label: "SaaS Partners" },
@@ -23,7 +22,7 @@ const Stats = () => {
             <p className="font-heading text-2xl font-bold text-gradient">Stats</p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 flex-1 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 flex-1 w-full">
             {stats.map((stat, i) => (
               <motion.div
                 key={stat.label}
