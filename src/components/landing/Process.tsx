@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Compass, Send, Filter, Trophy, HeartHandshake } from "lucide-react";
+import { NetworkBackground } from "./NetworkBackground";
 
 const steps = [
   {
