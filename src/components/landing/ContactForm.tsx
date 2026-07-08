@@ -23,21 +23,22 @@ const ContactForm = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="text-center lg:text-left"
           >
             <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-4">
               Let's Build Your <span className="text-gradient">Dream Team</span>
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            <p className="text-muted-foreground leading-relaxed mb-8 max-w-md mx-auto lg:mx-0">
               We're a network of Tech & SaaS professionals and recruiting veterans ready to
               help you hire quality talent, fast. Tell us about your needs and we'll
               get to work.
             </p>
-            <div className="space-y-4 text-sm text-muted-foreground">
-              <div className="flex items-center gap-3">
+            <div className="space-y-4 text-sm text-muted-foreground max-w-md mx-auto lg:mx-0">
+              <div className="flex items-center justify-center lg:justify-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary" />
                 <span>Response within 24 hours</span>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center justify-center lg:justify-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary" />
                 <span>No upfront fees, we work on success</span>
               </div>
