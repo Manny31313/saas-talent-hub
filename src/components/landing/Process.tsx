@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Compass, Send, Filter, Trophy, HeartHandshake } from "lucide-react";
+import { useRef } from "react";
 import { FloatingBackground } from "./FloatingBackground";
 
 const steps = [
@@ -44,6 +45,13 @@ const circleHoverVariants = {
 };
 
 const Process = () => {
+  const timelineRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: timelineRef,
+    offset: ["start 80%", "end 60%"],
+  });
+  const lineScaleY = useTransform(scrollYProgress, [0, 1], [0, 1]);
+
   return (
     <section className="py-14">
       <div className="container px-6">
@@ -65,21 +73,30 @@ const Process = () => {
         </motion.div>
 
         {/* Vertical timeline */}
-        <div className="relative max-w-2xl mx-auto">
-          <div aria-hidden className="absolute left-6 top-3 bottom-3 w-px bg-gradient-to-b from-primary/60 via-primary/30 to-transparent" />
+        <div ref={timelineRef} className="relative max-w-2xl mx-auto">
+          <div aria-hidden className="absolute left-6 top-3 bottom-3 w-px bg-primary/10" />
+          <motion.div
+            aria-hidden
+            style={{ scaleY: lineScaleY, transformOrigin: "top" }}
+            className="absolute left-6 top-3 bottom-3 w-px bg-gradient-to-b from-primary/80 via-primary/50 to-primary/20"
+          />
           <ol className="space-y-6">
             {steps.map((step, i) => (
               <motion.li
                 key={step.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05, duration: 0.4 }}
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{ duration: 0.4 }}
                 whileHover="hover"
                 className="relative pl-20 group"
               >
                 <motion.div
                   variants={circleHoverVariants}
+                  initial={{ scale: 0, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true, amount: 0.6 }}
+                  transition={{ type: "spring", stiffness: 200, damping: 15 }}
                   className="absolute left-0 top-0 w-12 h-12 rounded-full bg-card border-2 border-primary/40 flex items-center justify-center ambient-glow z-10"
                 >
                   <step.icon className="w-5 h-5 text-primary" />
