@@ -69,20 +69,20 @@ const Process = () => {
                 whileHover="hover"
                 className="relative pl-20 group"
               >
-                <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden rounded-xl">
-                  <div className="absolute -top-6 -left-4 w-24 h-24 rounded-full bg-primary/10 blur-2xl animate-float-slow" />
-                  <div className="absolute -bottom-8 right-8 w-28 h-28 rounded-full bg-accent/20 blur-2xl animate-float-slower" />
-                </div>
                 <motion.div
                   variants={{ hover: { scale: 1.08, y: -4, transition: { duration: 0.2 } } }}
-                  className="absolute left-0 top-0 w-12 h-12 rounded-full bg-card border-2 border-primary/40 flex items-center justify-center ambient-glow"
+                  className="absolute left-0 top-0 w-12 h-12 rounded-full bg-card border-2 border-primary/40 flex items-center justify-center ambient-glow z-10"
                 >
                   <step.icon className="w-5 h-5 text-primary" />
                 </motion.div>
                 <motion.div
                   variants={{ hover: { scale: 1.03, y: -6, transition: { duration: 0.2 } } }}
-                  className="glass rounded-xl p-5 ambient-glow cursor-pointer transition-colors"
+                  className="glass rounded-xl p-5 ambient-glow cursor-pointer transition-colors relative overflow-hidden"
                 >
+                  <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+                    <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-primary/10 blur-2xl animate-float-slow" />
+                    <div className="absolute -bottom-6 -left-2 w-24 h-24 rounded-full bg-accent/20 blur-2xl animate-float-slower" />
+                  </div>
                   <p className="text-xs uppercase tracking-widest text-primary font-semibold mb-1">{step.day}</p>
                   <h3 className="font-heading text-base font-semibold mb-2">{step.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{step.body}</p>
