@@ -23,16 +23,6 @@ const ContactForm = () => {
               help you hire quality talent, fast. Tell us about your needs and we'll
               get to work.
             </p>
-            <ul className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center mb-10 text-sm text-muted-foreground">
-              <li className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
-                <span>Response within 24 hours</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
-                <span>No upfront fees, we work on success</span>
-              </li>
-            </ul>
           </motion.div>
 
           <motion.div
