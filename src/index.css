@@ -95,25 +95,28 @@
                 0 0 24px -4px hsl(var(--primary) / 0.25);
   }
 
-  /* Animated, complementary gradient for the Current Stats card.
-     Moves through cream, sage green, dusty rose, and warm amber
-     to complement the site's forest-green palette. */
+  /* Animated, warm sunrise gradient for the Current Stats card.
+     Moves through cream, soft amber, and sage to complement the
+     site's forest-green palette while keeping the text readable. */
   @keyframes stats-gradient-move {
     0% { background-position: 0% 50%; }
+    25% { background-position: 50% 25%; }
     50% { background-position: 100% 50%; }
+    75% { background-position: 50% 75%; }
     100% { background-position: 0% 50%; }
   }
 
   .stats-moving-bg {
     background: linear-gradient(
-      -45deg,
+      135deg,
       hsl(44 38% 96%),
-      hsl(145 30% 88%),
-      hsl(325 30% 90%),
-      hsl(35 40% 90%),
+      hsl(40 45% 92%),
+      hsl(35 40% 88%),
+      hsl(44 35% 95%),
+      hsl(145 25% 90%),
       hsl(44 38% 96%)
     );
     background-size: 300% 300%;
-    animation: stats-gradient-move 10s ease infinite;
+    animation: stats-gradient-move 14s ease-in-out infinite;
   }
 }
