@@ -66,13 +66,21 @@ const Process = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05, duration: 0.4 }}
+                whileHover="hover"
                 className="relative pl-20 group"
               >
-                <div className="absolute left-0 top-0 w-12 h-12 rounded-full bg-card border-2 border-primary/40 flex items-center justify-center">
-                  <step.icon className="w-5 h-5 text-primary" />
+                <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden rounded-xl">
+                  <div className="absolute -top-6 -left-4 w-24 h-24 rounded-full bg-primary/10 blur-2xl animate-float-slow" />
+                  <div className="absolute -bottom-8 right-8 w-28 h-28 rounded-full bg-accent/20 blur-2xl animate-float-slower" />
                 </div>
                 <motion.div
-                  whileHover={{ scale: 1.03, y: -6, transition: { duration: 0.2 } }}
+                  variants={{ hover: { scale: 1.08, y: -4, transition: { duration: 0.2 } } }}
+                  className="absolute left-0 top-0 w-12 h-12 rounded-full bg-card border-2 border-primary/40 flex items-center justify-center ambient-glow"
+                >
+                  <step.icon className="w-5 h-5 text-primary" />
+                </motion.div>
+                <motion.div
+                  variants={{ hover: { scale: 1.03, y: -6, transition: { duration: 0.2 } } }}
                   className="glass rounded-xl p-5 ambient-glow cursor-pointer transition-colors"
                 >
                   <p className="text-xs uppercase tracking-widest text-primary font-semibold mb-1">{step.day}</p>
