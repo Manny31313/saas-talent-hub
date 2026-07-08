@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-team.jpg";
+import { NetworkBackground } from "./NetworkBackground";
 
 
 const Hero = () => {
