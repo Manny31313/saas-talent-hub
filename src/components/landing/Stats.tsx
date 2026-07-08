@@ -8,7 +8,8 @@ const stats = [
 
 const Stats = () => {
   return (
-    <section className="py-16">
+    <section className="relative py-16">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[140%] bg-primary/8 blur-3xl -z-10 rounded-full" />
       <div className="container px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
