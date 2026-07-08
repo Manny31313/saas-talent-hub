@@ -101,24 +101,30 @@ const Testimonials = () => {
                 <CarouselItem key={t.name} className="pl-4 md:basis-1/2 lg:basis-1/3">
                   <div className="relative overflow-hidden glass rounded-xl p-6 h-full flex flex-col border border-border ambient-glow">
                     <FloatingBackground />
-                    <Quote className="w-6 h-6 text-primary/70 mb-3" />
-                    <p className="text-foreground/90 leading-relaxed text-sm mb-5 flex-1">
-                      "{t.quote}"
-                    </p>
-                    <div className="flex items-center gap-3 pt-4 border-t border-border">
-                      <img
-                        src={t.image}
-                        alt={`${t.name} headshot`}
-                        loading="lazy"
-                        width={64}
-                        height={64}
-                        className="w-12 h-12 rounded-full object-cover border border-border"
-                      />
-                      <div>
-                        <div className="font-heading font-semibold text-sm">{t.name}</div>
-                        <div className="text-xs text-muted-foreground">{t.title}</div>
+                    <motion.div
+                      whileHover={{ scale: 1.03, y: -4 }}
+                      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                      className="relative z-10 flex flex-col h-full"
+                    >
+                      <Quote className="w-6 h-6 text-primary/70 mb-3" />
+                      <p className="text-foreground/90 leading-relaxed text-sm mb-5 flex-1">
+                        "{t.quote}"
+                      </p>
+                      <div className="flex items-center gap-3 pt-4 border-t border-border">
+                        <img
+                          src={t.image}
+                          alt={`${t.name} headshot`}
+                          loading="lazy"
+                          width={64}
+                          height={64}
+                          className="w-12 h-12 rounded-full object-cover border border-border"
+                        />
+                        <div>
+                          <div className="font-heading font-semibold text-sm">{t.name}</div>
+                          <div className="text-xs text-muted-foreground">{t.title}</div>
+                        </div>
                       </div>
-                    </div>
+                    </motion.div>
                   </div>
                 </CarouselItem>
               ))}
