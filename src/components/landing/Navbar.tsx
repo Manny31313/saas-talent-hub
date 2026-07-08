@@ -70,6 +70,7 @@ const Navbar = () => {
           </DropdownMenu>
 
           <a href="/#testimonials" className="hover:text-foreground transition-colors">Testimonials</a>
+          <Link to="/contact" className="hover:text-foreground transition-colors">Contact Us</Link>
         </div>
 
         <Button variant="hero" size="sm" asChild>
