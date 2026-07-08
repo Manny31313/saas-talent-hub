@@ -66,11 +66,13 @@ const Services = () => {
               className="group relative overflow-hidden glass rounded-xl p-6 hover:border-primary/30 transition-colors ambient-glow cursor-pointer"
             >
               <FloatingBackground />
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                <service.icon className="w-6 h-6 text-primary" />
+              <div className="relative z-10 text-center">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
+                  <service.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-heading text-lg font-semibold mb-2">{service.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
               </div>
-              <h3 className="font-heading text-lg font-semibold mb-2">{service.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
             </motion.div>
           ))}
         </div>
