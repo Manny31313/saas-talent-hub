@@ -78,13 +78,13 @@ const Process = () => {
                 className="relative pl-20 group"
               >
                 <motion.div
-                  variants={{ hover: { scale: 1.08, y: -4, transition: { duration: 0.2 } } }}
+                  variants={circleHoverVariants}
                   className="absolute left-0 top-0 w-12 h-12 rounded-full bg-card border-2 border-primary/40 flex items-center justify-center ambient-glow z-10"
                 >
                   <step.icon className="w-5 h-5 text-primary" />
                 </motion.div>
                 <motion.div
-                  variants={{ hover: { scale: 1.03, y: -6, transition: { duration: 0.2 } } }}
+                  variants={hoverVariants}
                   className="glass rounded-xl p-5 ambient-glow cursor-pointer transition-colors relative overflow-hidden"
                 >
                   <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
