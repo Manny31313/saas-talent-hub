@@ -16,7 +16,7 @@ const Stats = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative overflow-hidden glass stats-moving-bg rounded-2xl p-8 sm:p-10 flex flex-col sm:flex-row items-center gap-8"
+          className="relative overflow-hidden glass stats-moving-bg rounded-2xl p-8 sm:p-10 flex flex-col sm:flex-row items-center gap-8 ambient-glow"
         >
           <FloatingBackground />
           <div className="shrink-0">

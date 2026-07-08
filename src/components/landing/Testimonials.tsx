@@ -99,7 +99,7 @@ const Testimonials = () => {
             <CarouselContent className="-ml-4">
               {testimonials.map((t) => (
                 <CarouselItem key={t.name} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                  <div className="relative overflow-hidden glass rounded-xl p-6 h-full flex flex-col border border-border">
+                  <div className="relative overflow-hidden glass rounded-xl p-6 h-full flex flex-col border border-border ambient-glow">
                     <FloatingBackground />
                     <Quote className="w-6 h-6 text-primary/70 mb-3" />
                     <p className="text-foreground/90 leading-relaxed text-sm mb-5 flex-1">

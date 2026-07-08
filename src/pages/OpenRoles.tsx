@@ -48,7 +48,7 @@ const OpenRoles = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08, duration: 0.4 }}
-                className="glass rounded-xl p-6 hover:border-primary/30 transition-all group"
+                className="glass rounded-xl p-6 hover:border-primary/30 transition-all group ambient-glow"
               >
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
                   <div className="flex-1 min-w-0">

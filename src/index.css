@@ -95,6 +95,11 @@
                 0 0 24px -4px hsl(var(--primary) / 0.25);
   }
 
+  .ambient-glow-light {
+    box-shadow: 0 0 0 1px hsl(44 38% 96% / 0.25),
+                0 0 24px -4px hsl(44 38% 96% / 0.35);
+  }
+
   /* Animated, warm sunrise gradient for the Current Stats card.
      Moves through cream, soft amber, and sage to complement the
      site's forest-green palette while keeping the text readable. */
