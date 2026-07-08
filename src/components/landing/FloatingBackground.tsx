@@ -18,13 +18,13 @@ export const FloatingBackground = ({
     >
       <div
         className={cn(
-          "absolute -top-4 -right-4 w-20 h-20 rounded-full bg-primary/10 blur-2xl animate-float-slow",
+          "absolute -top-4 -right-4 w-20 h-20 rounded-full bg-primary/5 blur-2xl animate-float-slow",
           topClassName
         )}
       />
       <div
         className={cn(
-          "absolute -bottom-6 -left-2 w-24 h-24 rounded-full bg-accent/20 blur-2xl animate-float-slower",
+          "absolute -bottom-6 -left-2 w-24 h-24 rounded-full bg-accent/10 blur-2xl animate-float-slower",
           bottomClassName
         )}
       />
