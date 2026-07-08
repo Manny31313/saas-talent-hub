@@ -66,6 +66,10 @@
     @apply border-border;
   }
 
+  html {
+    font-size: clamp(16px, 1.2vw, 21px);
+  }
+
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
