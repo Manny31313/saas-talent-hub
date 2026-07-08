@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
+import { FloatingBackground } from "./FloatingBackground";
 
 const CALENDLY_URL = "https://calendly.com/saasrecruitingco/schedule";
 
@@ -48,8 +49,9 @@ const ContactForm = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="glass rounded-xl overflow-hidden ambient-glow"
+            className="relative glass rounded-xl overflow-hidden ambient-glow"
           >
+            <FloatingBackground />
             <div
               className="calendly-inline-widget w-full"
               data-url={`${CALENDLY_URL}?hide_gdpr_banner=1&background_color=f6f1e4&text_color=1a2e1f&primary_color=1a4d2e`}
