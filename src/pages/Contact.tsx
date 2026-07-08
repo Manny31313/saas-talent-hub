@@ -59,7 +59,7 @@ const Contact = () => {
         description: "We'll be in touch within 24 hours.",
       });
       (e.target as HTMLFormElement).reset();
-      setRoles([]);
+      setRole("");
     }, 1000);
   };
 
