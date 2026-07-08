@@ -18,14 +18,14 @@ const Index = () => {
     <div className="relative min-h-screen">
       <Navbar />
 
-      {/* Slim top banner - Contact Now */}
+      {/* Slim top banner - Contact */}
       <Link
         to="/contact"
         className="block w-full bg-primary/10 border-b border-primary/20 hover:bg-primary/15 transition-colors"
       >
         <div className="container px-6 py-2.5 flex items-center justify-center gap-2 text-sm font-medium text-primary">
           <Mail className="w-4 h-4" />
-          <span>Contact Now</span>
+          <span>Contact</span>
           <ArrowRight className="w-4 h-4" />
         </div>
       </Link>
