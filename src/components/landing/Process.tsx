@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Compass, Send, Filter, Trophy, HeartHandshake } from "lucide-react";
+import { FloatingBackground } from "./FloatingBackground";
 
 const steps = [
   {
