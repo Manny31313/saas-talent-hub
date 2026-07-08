@@ -33,12 +33,12 @@ const ContactForm = () => {
               help you hire quality talent, fast. Tell us about your needs and we'll
               get to work.
             </p>
-            <div className="space-y-4 text-sm text-muted-foreground max-w-md mx-auto lg:mx-0">
-              <div className="flex items-center justify-center lg:justify-start gap-3">
+            <div className="space-y-4 text-sm text-muted-foreground max-w-md mx-auto">
+              <div className="flex items-center justify-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary" />
                 <span>Response within 24 hours</span>
               </div>
-              <div className="flex items-center justify-center lg:justify-start gap-3">
+              <div className="flex items-center justify-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary" />
                 <span>No upfront fees, we work on success</span>
               </div>
