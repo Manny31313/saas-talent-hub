@@ -15,7 +15,7 @@ const Stats = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="glass rounded-2xl p-8 sm:p-10 flex flex-col sm:flex-row items-center gap-8"
+          className="glass stats-moving-bg rounded-2xl p-8 sm:p-10 flex flex-col sm:flex-row items-center gap-8"
         >
           <div className="shrink-0">
             <p className="text-sm uppercase tracking-widest text-muted-foreground font-medium">Current</p>
