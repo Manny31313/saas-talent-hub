@@ -19,7 +19,7 @@ import Footer from "@/components/landing/Footer";
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [roles, setRoles] = useState<string[]>([]);
+  const [role, setRole] = useState("");
 
   const roleOptions = [
     { value: "executive", label: "Executive Leadership (VP, CRO, CMO, CTO)" },
@@ -29,12 +29,6 @@ const Contact = () => {
     { value: "people-ops", label: "People Ops (HR, Talent)" },
     { value: "other", label: "Other / Multiple roles" },
   ];
-
-  const toggleRole = (value: string) => {
-    setRoles((prev) =>
-      prev.includes(value) ? prev.filter((r) => r !== value) : [...prev, value]
-    );
-  };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
