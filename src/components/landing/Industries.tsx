@@ -52,7 +52,7 @@ const Industries = () => {
             className="relative z-10"
           >
             <div className="bg-primary text-primary-foreground rounded-2xl px-10 py-5 shadow-lg ambient-glow-light">
-              <span className="font-heading font-bold text-2xl tracking-wide">SaaS</span>
+              <span className="font-heading font-bold text-2xl tracking-wide">Tech Industry</span>
             </div>
           </motion.div>
 
