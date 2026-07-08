@@ -53,11 +53,13 @@ const WhyChoose = () => {
               className="relative overflow-hidden glass rounded-xl p-6 border border-border hover:border-primary/30 transition-colors ambient-glow cursor-pointer"
             >
               <FloatingBackground />
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                <p.icon className="w-6 h-6 text-primary" />
+              <div className="relative z-10 text-center">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 mx-auto">
+                  <p.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-heading text-base font-semibold mb-2">{p.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{p.body}</p>
               </div>
-              <h3 className="font-heading text-base font-semibold mb-2">{p.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{p.body}</p>
             </motion.div>
           ))}
         </div>

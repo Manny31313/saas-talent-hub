@@ -28,15 +28,13 @@ const Industries = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="grid lg:grid-cols-[1fr_2fr] gap-12 mb-10 items-start"
+          className="text-center mb-10 max-w-3xl mx-auto"
         >
-          <div>
-            <p className="text-sm uppercase tracking-widest text-primary font-medium mb-2">Company Size</p>
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold">
-              Who We <span className="text-gradient">Help.</span>
-            </h2>
-          </div>
-          <p className="text-lg text-muted-foreground leading-relaxed self-end">
+          <p className="text-sm uppercase tracking-widest text-primary font-medium mb-2">Company Size</p>
+          <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-4">
+            Who We <span className="text-gradient">Help.</span>
+          </h2>
+          <p className="text-lg text-muted-foreground leading-relaxed">
             Whether you're building a team for the first time or looking to scale your current team's efforts, we'll save you the time and hassle of finding the right people across every corner of the SaaS ecosystem, whether you're in the software or service space.
           </p>
         </motion.div>

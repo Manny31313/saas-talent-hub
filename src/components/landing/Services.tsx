@@ -43,15 +43,13 @@ const Services = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="grid lg:grid-cols-[1fr_2fr] gap-12 mb-10 items-start"
+          className="text-center mb-10 max-w-3xl mx-auto"
         >
-          <div>
-            <p className="text-sm uppercase tracking-widest text-primary font-medium mb-2">What We Do</p>
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold">
-              Our <span className="text-gradient">Expertise.</span>
-            </h2>
-          </div>
-          <p className="text-lg text-muted-foreground leading-relaxed self-end">
+          <p className="text-sm uppercase tracking-widest text-primary font-medium mb-2">What We Do</p>
+          <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-4">
+            Our <span className="text-gradient">Expertise.</span>
+          </h2>
+          <p className="text-lg text-muted-foreground leading-relaxed">
             Our team is backed by advisors who have first-hand experience in the roles we hire for, ensuring you finally found a recruiting team that understands the technical nuances necessary to save you time, resources, and protect your ROI.
           </p>
         </motion.div>
@@ -68,11 +66,13 @@ const Services = () => {
               className="group relative overflow-hidden glass rounded-xl p-6 hover:border-primary/30 transition-colors ambient-glow cursor-pointer"
             >
               <FloatingBackground />
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                <service.icon className="w-6 h-6 text-primary" />
+              <div className="relative z-10 text-center">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
+                  <service.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-heading text-lg font-semibold mb-2">{service.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
               </div>
-              <h3 className="font-heading text-lg font-semibold mb-2">{service.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
             </motion.div>
           ))}
         </div>

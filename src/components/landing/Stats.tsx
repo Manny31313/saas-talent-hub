@@ -19,7 +19,7 @@ const Stats = () => {
           className="relative overflow-hidden glass stats-moving-bg rounded-2xl p-8 sm:p-10 flex flex-col sm:flex-row items-center gap-8 ambient-glow"
         >
           <FloatingBackground />
-          <div className="shrink-0">
+          <div className="shrink-0 text-center">
             <p className="text-sm uppercase tracking-widest text-muted-foreground font-medium">Current</p>
             <p className="font-heading text-2xl font-bold text-gradient">Stats</p>
           </div>

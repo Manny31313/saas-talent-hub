@@ -59,15 +59,13 @@ const Process = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="grid lg:grid-cols-[1fr_2fr] gap-12 mb-12 items-start"
+          className="text-center mb-12 max-w-3xl mx-auto"
         >
-          <div>
-            <p className="text-sm uppercase tracking-widest text-primary font-medium mb-2">How We Do It</p>
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold">
-              Our <span className="text-gradient">Process.</span>
-            </h2>
-          </div>
-          <p className="text-lg text-muted-foreground leading-relaxed self-end">
+          <p className="text-sm uppercase tracking-widest text-primary font-medium mb-2">How We Do It</p>
+          <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-4">
+            Our <span className="text-gradient">Process.</span>
+          </h2>
+          <p className="text-lg text-muted-foreground leading-relaxed">
             A high-velocity, 14-day sprint built on total market transparency and elite vetting. We don't recycle stale databases - we build fresh maps for your exact role, every single time.
           </p>
         </motion.div>
@@ -103,12 +101,12 @@ const Process = () => {
                 </motion.div>
                 <motion.div
                   variants={hoverVariants}
-                  className="glass rounded-xl p-5 ambient-glow cursor-pointer transition-colors relative overflow-hidden"
+                  className="glass rounded-xl p-5 ambient-glow cursor-pointer transition-colors relative overflow-hidden text-center"
                 >
                   <FloatingBackground />
-                  <p className="text-xs uppercase tracking-widest text-primary font-semibold mb-1">{step.day}</p>
-                  <h3 className="font-heading text-base font-semibold mb-2">{step.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{step.body}</p>
+                  <p className="relative z-10 text-xs uppercase tracking-widest text-primary font-semibold mb-1">{step.day}</p>
+                  <h3 className="relative z-10 font-heading text-base font-semibold mb-2">{step.title}</h3>
+                  <p className="relative z-10 text-sm text-muted-foreground leading-relaxed">{step.body}</p>
                 </motion.div>
               </motion.li>
             ))}
