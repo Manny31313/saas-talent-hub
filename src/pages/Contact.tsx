@@ -4,7 +4,13 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Checkbox } from "@/components/ui/checkbox";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import Navbar from "@/components/landing/Navbar";
@@ -13,7 +19,7 @@ import Footer from "@/components/landing/Footer";
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [roles, setRoles] = useState<string[]>([]);
+  const [role, setRole] = useState("");
 
   const roleOptions = [
     { value: "executive", label: "Executive Leadership (VP, CRO, CMO, CTO)" },
@@ -24,12 +30,6 @@ const Contact = () => {
     { value: "other", label: "Other / Multiple roles" },
   ];
 
-  const toggleRole = (value: string) => {
-    setRoles((prev) =>
-      prev.includes(value) ? prev.filter((r) => r !== value) : [...prev, value]
-    );
-  };
-
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -39,7 +39,7 @@ const Contact = () => {
       name: formData.get("name"),
       email: formData.get("email"),
       company: formData.get("company"),
-      roles,
+      role,
       message: formData.get("message"),
     };
 
@@ -48,7 +48,7 @@ const Contact = () => {
       `Name: ${data.name}%0A` +
       `Email: ${data.email}%0A` +
       `Company: ${data.company}%0A` +
-      `Role Categories: ${data.roles.join(", ")}%0A%0A` +
+      `Role Category: ${data.role}%0A%0A` +
       `Hiring needs:%0A${data.message}`;
     window.location.href = `mailto:emmanuel.keezer@saasrecruitingco.com?subject=${encodeURIComponent(subject)}&body=${body}`;
 
@@ -59,7 +59,7 @@ const Contact = () => {
         description: "We'll be in touch within 24 hours.",
       });
       (e.target as HTMLFormElement).reset();
-      setRoles([]);
+      setRole("");
     }, 1000);
   };
 
@@ -84,7 +84,11 @@ const Contact = () => {
               <ul className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center mt-6 text-sm text-muted-foreground">
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
-                  <span>No upfront fees, we work on success</span>
+                  <span>No upfront fees</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
+                  <span>Only pay for results</span>
                 </li>
               </ul>
             </motion.div>
@@ -115,32 +119,22 @@ const Contact = () => {
                   className="bg-secondary/50 border-border placeholder:text-muted-foreground/50" />
               </div>
 
-              <div className="space-y-3">
+              <div className="space-y-2">
                 <label className="text-sm font-medium text-foreground">
                   Role Category <span className="text-muted-foreground font-normal">(Select all that apply)</span> *
                 </label>
-                <div className="grid sm:grid-cols-2 gap-2">
-                  {roleOptions.map((opt) => {
-                    const checked = roles.includes(opt.value);
-                    return (
-                      <label
-                        key={opt.value}
-                        htmlFor={`role-${opt.value}`}
-                        className={`flex items-start gap-3 cursor-pointer rounded-lg border p-3 text-sm transition-colors ${
-                          checked ? "border-primary bg-primary/5" : "border-border bg-secondary/30"
-                        }`}
-                      >
-                        <Checkbox
-                          id={`role-${opt.value}`}
-                          checked={checked}
-                          onCheckedChange={() => toggleRole(opt.value)}
-                          className="mt-0.5"
-                        />
-                        <span>{opt.label}</span>
-                      </label>
-                    );
-                  })}
-                </div>
+                <Select required value={role} onValueChange={setRole}>
+                  <SelectTrigger className="bg-secondary/50 border-border">
+                    <SelectValue placeholder="Select a role category" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {roleOptions.map((opt) => (
+                      <SelectItem key={opt.value} value={opt.value}>
+                        {opt.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
               </div>
 
               <div className="space-y-2">
