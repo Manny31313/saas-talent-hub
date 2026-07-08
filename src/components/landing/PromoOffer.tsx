@@ -23,7 +23,7 @@ const PromoOffer = () => {
               No upfront fees. <span className="text-gradient">Only pay for results.</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto mb-8 text-lg leading-relaxed">
-              We're so confident in our ability to deliver quality talent that you only pay when we make a successful placement. No contracts, no commitments, just a chance to earn your business. Let us prove what we can do.
+              We're so confident in our ability to deliver quality talent that you only pay when we make a successful placement. No crazy contracts or commitments, just a chance to earn your business. Let us prove what we can do.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button variant="hero" size="lg" className="text-base px-8 py-6" asChild>
