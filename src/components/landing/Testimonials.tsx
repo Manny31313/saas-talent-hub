@@ -104,13 +104,13 @@ const Testimonials = () => {
                     <motion.div
                       whileHover={{ scale: 1.03, y: -4 }}
                       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                      className="relative z-10 flex flex-col h-full"
+                      className="relative z-10 flex flex-col h-full text-center"
                     >
-                      <Quote className="w-6 h-6 text-primary/70 mb-3" />
+                      <Quote className="w-6 h-6 text-primary/70 mb-3 mx-auto" />
                       <p className="text-foreground/90 leading-relaxed text-sm mb-5 flex-1">
                         "{t.quote}"
                       </p>
-                      <div className="flex items-center gap-3 pt-4 border-t border-border">
+                      <div className="flex flex-col items-center gap-3 pt-4 border-t border-border">
                         <img
                           src={t.image}
                           alt={`${t.name} headshot`}
