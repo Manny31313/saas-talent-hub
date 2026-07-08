@@ -88,12 +88,22 @@ export default {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-50%)" },
         },
+        "float-slow": {
+          "0%, 100%": { transform: "translate(0px, 0px)" },
+          "50%": { transform: "translate(10px, -12px)" },
+        },
+        "float-slower": {
+          "0%, 100%": { transform: "translate(0px, 0px)" },
+          "50%": { transform: "translate(-14px, 10px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-up": "fade-up 0.6s ease-out forwards",
         "marquee": "marquee 40s linear infinite",
+        "float-slow": "float-slow 7s ease-in-out infinite",
+        "float-slower": "float-slower 9s ease-in-out infinite",
       },
     },
   },
