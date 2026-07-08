@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Send, Quote } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import Navbar from "@/components/landing/Navbar";
@@ -16,6 +16,21 @@ const TalentNetwork = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [intent, setIntent] = useState("active");
+  const [experience, setExperience] = useState<string[]>([]);
+
+  const experienceOptions = [
+    { value: "executive", label: "Executive Leadership (VP, CRO, CMO, CTO)" },
+    { value: "gtm", label: "Go-to-Market (AE, SDR, CSM)" },
+    { value: "revops", label: "RevOps (Sales Engineer, RevOps Analyst)" },
+    { value: "devops", label: "DevOps (Data Scientist, Data Engineer)" },
+    { value: "people-ops", label: "People Ops (HR, Talent)" },
+  ];
+
+  const toggleExperience = (value: string) => {
+    setExperience((prev) =>
+      prev.includes(value) ? prev.filter((v) => v !== value) : [...prev, value]
+    );
+  };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -27,7 +42,7 @@ const TalentNetwork = () => {
       name: formData.get("name"),
       email: formData.get("email"),
       linkedin: formData.get("linkedin"),
-      discipline: formData.get("discipline"),
+      experience: experience.join(", "),
       message: formData.get("message"),
     };
 
@@ -37,7 +52,7 @@ const TalentNetwork = () => {
       `Name: ${data.name}%0A` +
       `Email: ${data.email}%0A` +
       `LinkedIn: ${data.linkedin}%0A` +
-      `Discipline: ${data.discipline}%0A%0A` +
+      `Experience: ${data.experience}%0A%0A` +
       `Context:%0A${data.message}`;
     window.location.href = `mailto:emmanuel.keezer@saasrecruitingco.com?subject=${encodeURIComponent(subject)}&body=${body}`;
 
@@ -49,6 +64,7 @@ const TalentNetwork = () => {
       });
       (e.target as HTMLFormElement).reset();
       setIntent("active");
+      setExperience([]);
     }, 1000);
   };
 
@@ -75,27 +91,32 @@ const TalentNetwork = () => {
                 opportunities - whether you're actively searching or just open to the right move.
               </p>
 
-              <div className="glass rounded-xl p-6 border border-border ambient-glow">
-                <Quote className="w-6 h-6 text-primary/70 mb-3" />
-                <p className="text-foreground/90 leading-relaxed text-sm mb-5">
-                  "This recruiting team helped me land the biggest break of my career. They
-                  understood exactly what I wanted, advocated hard on my behalf, and kept me in
-                  the loop the entire time. I couldn't recommend them more highly."
-                </p>
-                <div className="flex items-center gap-3 pt-4 border-t border-border">
-                  <img
-                    src={avatarHannah}
-                    alt="Hannah Whitfield headshot"
-                    loading="lazy"
-                    width={48}
-                    height={48}
-                    className="w-12 h-12 rounded-full object-cover border border-border"
-                  />
-                  <div>
-                    <div className="font-heading font-semibold text-sm">Hannah Whitfield</div>
-                    <div className="text-xs text-muted-foreground">Placed candidate, now VP Marketing</div>
+              <div className="relative glass rounded-xl p-6 border border-border ambient-glow">
+                <motion.div
+                  whileHover={{ scale: 1.03, y: -4 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                >
+                  <Quote className="w-6 h-6 text-primary/70 mb-3" />
+                  <p className="text-foreground/90 leading-relaxed text-sm mb-5">
+                    "This recruiting team helped me land the biggest break of my career. They
+                    understood exactly what I wanted, advocated hard on my behalf, and kept me in
+                    the loop the entire time. I couldn't recommend them more highly."
+                  </p>
+                  <div className="flex items-center gap-3 pt-4 border-t border-border">
+                    <img
+                      src={avatarHannah}
+                      alt="Hannah Whitfield headshot"
+                      loading="lazy"
+                      width={48}
+                      height={48}
+                      className="w-12 h-12 rounded-full object-cover border border-border"
+                    />
+                    <div>
+                      <div className="font-heading font-semibold text-sm">Hannah Whitfield</div>
+                      <div className="text-xs text-muted-foreground">Placed candidate, now VP Marketing</div>
+                    </div>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </motion.div>
 
@@ -155,20 +176,32 @@ const TalentNetwork = () => {
                   className="bg-secondary/50 border-border placeholder:text-muted-foreground/50" />
               </div>
 
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Primary Discipline *</label>
-                <Select required name="discipline">
-                  <SelectTrigger className="bg-secondary/50 border-border">
-                    <SelectValue placeholder="Select" className="data-[placeholder]:text-muted-foreground/50" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="executive">Executive Leadership (VP, CRO, CMO, CTO)</SelectItem>
-                    <SelectItem value="gtm">Go-to-Market (AE, SDR, CSM)</SelectItem>
-                    <SelectItem value="revops">RevOps (Sales Engineer, RevOps Analyst)</SelectItem>
-                    <SelectItem value="devops">DevOps (Data Scientist, Data Engineer)</SelectItem>
-                    <SelectItem value="people-ops">People Ops (HR, Talent)</SelectItem>
-                  </SelectContent>
-                </Select>
+              <div className="space-y-3">
+                <label className="text-sm font-medium text-foreground">
+                  Experience <span className="text-muted-foreground font-normal">(choose all that apply)</span> *
+                </label>
+                <div className="grid sm:grid-cols-2 gap-2">
+                  {experienceOptions.map((opt) => {
+                    const checked = experience.includes(opt.value);
+                    return (
+                      <label
+                        key={opt.value}
+                        htmlFor={`exp-${opt.value}`}
+                        className={`flex items-start gap-3 cursor-pointer rounded-lg border p-3 text-sm transition-colors ${
+                          checked ? "border-primary bg-primary/5" : "border-border bg-secondary/30"
+                        }`}
+                      >
+                        <Checkbox
+                          id={`exp-${opt.value}`}
+                          checked={checked}
+                          onCheckedChange={() => toggleExperience(opt.value)}
+                          className="mt-0.5"
+                        />
+                        <span>{opt.label}</span>
+                      </label>
+                    );
+                  })}
+                </div>
               </div>
 
               <div className="space-y-2">
