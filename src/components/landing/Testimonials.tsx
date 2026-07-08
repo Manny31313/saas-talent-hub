@@ -44,7 +44,7 @@ const testimonials = [
   },
   {
     quote:
-      "We tried three other agencies before working with SRC and the difference was immediate. They actually understood the technical nuances of the RevOps and Data roles we were hiring for. Their candidates were sharper, better prepared, and far more aligned with our culture. Two of them are now leading entire functions inside our org.",
+      "We tried three other agencies before working with SRC and the difference was immediate. They actually understood the technical nuances of the RevOps and Data roles we were hiring for. Their candidates were sharper, better prepared, and far more aligned with our culture. Two of them lead entire functions inside our org.",
     name: "Marcus Johnson",
     title: "CRO, Vector Analytics",
     image: marcusImg,

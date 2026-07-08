@@ -87,7 +87,7 @@ const TalentNetwork = () => {
               </h1>
               <p className="text-muted-foreground leading-relaxed mb-8">
                 A frictionless way to put yourself in front of the most ambitious Tech & SaaS
-                companies hiring right now. Tell us where you're at, and we'll surface the right
+                companies actively hiring. Tell us where you're at, and we'll surface the right
                 opportunities - whether you're actively searching or just open to the right move.
               </p>
 
@@ -113,7 +113,7 @@ const TalentNetwork = () => {
                     />
                     <div>
                       <div className="font-heading font-semibold text-sm">Hannah Whitfield</div>
-                      <div className="text-xs text-muted-foreground">Placed candidate, now VP Marketing</div>
+                      <div className="text-xs text-muted-foreground">Placed candidate, VP Marketing</div>
                     </div>
                   </div>
                 </motion.div>
