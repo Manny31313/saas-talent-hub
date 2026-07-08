@@ -23,7 +23,7 @@ const ContactForm = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center lg:text-left"
+            className="text-center"
           >
             <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-4">
               Let's Build Your <span className="text-gradient">Dream Team</span>
