@@ -75,7 +75,7 @@ const TalentNetwork = () => {
                 opportunities - whether you're actively searching or just open to the right move.
               </p>
 
-              <div className="glass rounded-xl p-6 border border-border">
+              <div className="glass rounded-xl p-6 border border-border ambient-glow">
                 <Quote className="w-6 h-6 text-primary/70 mb-3" />
                 <p className="text-foreground/90 leading-relaxed text-sm mb-5">
                   "This recruiting team helped me land the biggest break of my career. They
@@ -105,7 +105,7 @@ const TalentNetwork = () => {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="glass rounded-xl p-6 sm:p-8 space-y-6"
+              className="glass rounded-xl p-6 sm:p-8 space-y-6 ambient-glow"
             >
               <div className="space-y-3">
                 <label className="text-sm font-medium text-foreground">
