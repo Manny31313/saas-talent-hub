@@ -75,7 +75,7 @@ const Candidates = () => {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="glass rounded-xl p-6 sm:p-8 space-y-5"
+              className="glass rounded-xl p-6 sm:p-8 space-y-5 ambient-glow"
             >
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-2">

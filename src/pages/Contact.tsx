@@ -73,7 +73,7 @@ const Contact = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="glass rounded-xl p-6 sm:p-8 space-y-5"
+              className="glass rounded-xl p-6 sm:p-8 space-y-5 ambient-glow"
             >
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
