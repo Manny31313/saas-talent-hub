@@ -77,8 +77,9 @@ const Industries = () => {
                 <div className="w-px h-8 bg-primary/40" aria-hidden="true" />
                 <motion.div
                   whileHover={{ scale: 1.03, y: -6, transition: { duration: 0.2 } }}
-                  className="glass rounded-xl p-5 w-full text-center hover:border-primary/40 transition-colors ambient-glow cursor-pointer"
+                  className="relative overflow-hidden glass rounded-xl p-5 w-full text-center hover:border-primary/40 transition-colors ambient-glow cursor-pointer"
                 >
+                  <FloatingBackground />
                   <h3 className="font-heading font-semibold text-base sm:text-lg text-primary mb-1.5">
                     {v.name}
                   </h3>
