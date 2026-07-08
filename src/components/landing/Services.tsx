@@ -43,15 +43,13 @@ const Services = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="grid lg:grid-cols-[1fr_2fr] gap-12 mb-10 items-start"
+          className="text-center mb-10 max-w-3xl mx-auto"
         >
-          <div>
-            <p className="text-sm uppercase tracking-widest text-primary font-medium mb-2">What We Do</p>
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold">
-              Our <span className="text-gradient">Expertise.</span>
-            </h2>
-          </div>
-          <p className="text-lg text-muted-foreground leading-relaxed self-end">
+          <p className="text-sm uppercase tracking-widest text-primary font-medium mb-2">What We Do</p>
+          <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-4">
+            Our <span className="text-gradient">Expertise.</span>
+          </h2>
+          <p className="text-lg text-muted-foreground leading-relaxed">
             Our team is backed by advisors who have first-hand experience in the roles we hire for, ensuring you finally found a recruiting team that understands the technical nuances necessary to save you time, resources, and protect your ROI.
           </p>
         </motion.div>
