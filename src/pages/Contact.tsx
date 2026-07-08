@@ -39,7 +39,7 @@ const Contact = () => {
       name: formData.get("name"),
       email: formData.get("email"),
       company: formData.get("company"),
-      role,
+      roles,
       message: formData.get("message"),
     };
 
@@ -48,7 +48,7 @@ const Contact = () => {
       `Name: ${data.name}%0A` +
       `Email: ${data.email}%0A` +
       `Company: ${data.company}%0A` +
-      `Role Category: ${data.role}%0A%0A` +
+      `Role Categories: ${data.roles.join(", ")}%0A%0A` +
       `Hiring needs:%0A${data.message}`;
     window.location.href = `mailto:emmanuel.keezer@saasrecruitingco.com?subject=${encodeURIComponent(subject)}&body=${body}`;
 
