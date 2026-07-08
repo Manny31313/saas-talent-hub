@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { FloatingBackground } from "./FloatingBackground";
 
 const verticals = [
   {

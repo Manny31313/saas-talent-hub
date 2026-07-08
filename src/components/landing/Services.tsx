@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Users, Target, BarChart2, UserCog, Sparkles } from "lucide-react";
+import { FloatingBackground } from "./FloatingBackground";
 
 const services = [
   {

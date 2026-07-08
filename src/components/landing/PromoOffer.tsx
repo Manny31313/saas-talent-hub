@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
+import { FloatingBackground } from "./FloatingBackground";
 
 const CALENDLY_URL = "https://calendly.com/saasrecruitingco/schedule";
 

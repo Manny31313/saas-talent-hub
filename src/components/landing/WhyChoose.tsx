@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Rocket, Target, Workflow, HeartHandshake } from "lucide-react";
+import { FloatingBackground } from "./FloatingBackground";
 
 const pillars = [
   {

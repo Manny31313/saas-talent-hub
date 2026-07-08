@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
+import { FloatingBackground } from "./FloatingBackground";
 import {
   Carousel,
   CarouselContent,

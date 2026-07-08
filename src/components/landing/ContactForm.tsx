@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
+import { FloatingBackground } from "./FloatingBackground";
 
 const CALENDLY_URL = "https://calendly.com/saasrecruitingco/schedule";
 
