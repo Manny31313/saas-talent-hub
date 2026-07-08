@@ -42,6 +42,38 @@ const circleHoverVariants = {
   hover: { scale: 1.08, y: -4, transition: { duration: 0.2 } },
 };
 
+const particles = [
+  { size: 6, left: "12%", bottom: "8%", delay: "0s", duration: "6s" },
+  { size: 4, left: "28%", bottom: "18%", delay: "1.2s", duration: "8s" },
+  { size: 8, left: "46%", bottom: "5%", delay: "0.6s", duration: "7s" },
+  { size: 5, left: "62%", bottom: "22%", delay: "2.1s", duration: "9s" },
+  { size: 7, left: "78%", bottom: "10%", delay: "0.3s", duration: "6.5s" },
+  { size: 3, left: "88%", bottom: "30%", delay: "1.5s", duration: "7.5s" },
+  { size: 5, left: "20%", bottom: "35%", delay: "3s", duration: "8.5s" },
+  { size: 4, left: "55%", bottom: "14%", delay: "2.4s", duration: "6.2s" },
+  { size: 6, left: "70%", bottom: "28%", delay: "0.9s", duration: "9.2s" },
+  { size: 3, left: "38%", bottom: "40%", delay: "1.8s", duration: "7.2s" },
+];
+
+const Particles = () => (
+  <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+    {particles.map((p, i) => (
+      <span
+        key={i}
+        className="particle"
+        style={{
+          width: p.size,
+          height: p.size,
+          left: p.left,
+          bottom: p.bottom,
+          animationDelay: p.delay,
+          animationDuration: p.duration,
+        }}
+      />
+    ))}
+  </div>
+);
+
 const Process = () => {
   return (
     <section className="py-14">
