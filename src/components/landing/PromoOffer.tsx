@@ -17,6 +17,7 @@ const PromoOffer = () => {
           className="relative rounded-2xl border border-primary/20 bg-primary/5 p-12 sm:p-16 text-center overflow-hidden"
         >
           <div className="absolute inset-0 bg-[var(--gradient-hero)] opacity-50" />
+          <FloatingBackground />
           <div className="relative z-10">
             <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-6">
               No upfront fees. <span className="text-gradient">Only pay for results.</span>
