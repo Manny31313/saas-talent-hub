@@ -25,6 +25,16 @@ const PromoOffer = () => {
             <p className="text-muted-foreground max-w-2xl mx-auto mb-8 text-lg leading-relaxed">
               We're so confident in our ability to deliver quality talent that you only pay when we make a successful placement. No contracts, no commitments, just a chance to earn your business. Let us prove what we can do.
             </p>
+            <ul className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center mb-8 text-sm text-muted-foreground">
+              <li className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
+                <span>Response within 24 hours</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
+                <span>No upfront fees, we work on success</span>
+              </li>
+            </ul>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button variant="hero" size="lg" className="text-base px-8 py-6" asChild>
                 <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
