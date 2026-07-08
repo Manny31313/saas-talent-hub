@@ -18,21 +18,12 @@ const ContactForm = () => {
             <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-4">
               Let's Build Your <span className="text-gradient">Dream Team</span>
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-8 max-w-2xl mx-auto">
+            <p className="text-muted-foreground leading-relaxed mb-4 max-w-2xl mx-auto">
               We're a network of Tech & SaaS professionals and recruiting veterans ready to
               help you hire quality talent, fast. Tell us about your needs and we'll
               get to work.
             </p>
-            <ul className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center mb-10 text-sm text-muted-foreground">
-              <li className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
-                <span>Response within 24 hours</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
-                <span>No upfront fees, we work on success</span>
-              </li>
-            </ul>
+            <div className="mb-8" />
           </motion.div>
 
           <motion.div
