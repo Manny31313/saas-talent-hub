@@ -25,7 +25,7 @@ const services = [
   },
   {
     icon: UserCog,
-    title: "People Operations",
+    title: "People Ops",
     description: "HR, Talent, and People Ops professionals who scale culture and build high-performing teams.",
   },
   {
