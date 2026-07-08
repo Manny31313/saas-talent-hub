@@ -22,8 +22,8 @@ const Index = () => {
           className="absolute inset-0 -z-10"
           style={{ backgroundImage: "var(--gradient-page)" }}
         />
-        <PromoOffer />
         <Hero />
+        <PromoOffer />
       </div>
 
       <LogoMarquee />
