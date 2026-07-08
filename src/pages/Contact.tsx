@@ -115,21 +115,32 @@ const Contact = () => {
                   className="bg-secondary/50 border-border placeholder:text-muted-foreground/50" />
               </div>
 
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Role Category *</label>
-                <Select required value={role} onValueChange={setRole}>
-                  <SelectTrigger className="bg-secondary/50 border-border">
-                    <SelectValue placeholder="Select a category" className="data-[placeholder]:text-muted-foreground/50" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="executive">Executive Leadership (VP, CRO, CMO, CTO)</SelectItem>
-                    <SelectItem value="gtm">Go-to-Market (AE, SDR, CSM)</SelectItem>
-                    <SelectItem value="revops">RevOps (Sales Engineer, RevOps Analyst)</SelectItem>
-                    <SelectItem value="devops">DevOps (Data Scientist, Data Engineer)</SelectItem>
-                    <SelectItem value="people-ops">People Ops (HR, Talent)</SelectItem>
-                    <SelectItem value="other">Other / Multiple roles</SelectItem>
-                  </SelectContent>
-                </Select>
+              <div className="space-y-3">
+                <label className="text-sm font-medium text-foreground">
+                  Role Category <span className="text-muted-foreground font-normal">(Select all that apply)</span> *
+                </label>
+                <div className="grid sm:grid-cols-2 gap-2">
+                  {roleOptions.map((opt) => {
+                    const checked = roles.includes(opt.value);
+                    return (
+                      <label
+                        key={opt.value}
+                        htmlFor={`role-${opt.value}`}
+                        className={`flex items-start gap-3 cursor-pointer rounded-lg border p-3 text-sm transition-colors ${
+                          checked ? "border-primary bg-primary/5" : "border-border bg-secondary/30"
+                        }`}
+                      >
+                        <Checkbox
+                          id={`role-${opt.value}`}
+                          checked={checked}
+                          onCheckedChange={() => toggleRole(opt.value)}
+                          className="mt-0.5"
+                        />
+                        <span>{opt.label}</span>
+                      </label>
+                    );
+                  })}
+                </div>
               </div>
 
               <div className="space-y-2">
