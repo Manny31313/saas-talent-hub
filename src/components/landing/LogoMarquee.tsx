@@ -18,7 +18,7 @@ const logos = [
 const LogoMarquee = () => {
   const row = [...logos, ...logos];
   return (
-    <section className="py-10 border-y border-border/60 bg-card/40 overflow-hidden">
+    <section className="py-10 border-t border-border/20 border-b border-border/60 bg-card/40 overflow-hidden">
       <div className="container px-6 mb-6">
         <p className="text-center text-xs uppercase tracking-widest text-muted-foreground">
           Trusted by high-growth SaaS teams
