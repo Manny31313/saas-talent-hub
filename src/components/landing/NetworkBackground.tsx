@@ -30,12 +30,12 @@ const links = [
   { from: 7, to: 9 },
 ];
 
-export const NetworkBackground = () => {
+export const NetworkBackground = ({ className = "" }: { className?: string }) => {
   return (
     <svg
       viewBox="0 0 100 100"
       preserveAspectRatio="xMidYMid slice"
-      className="absolute inset-0 w-full h-full pointer-events-none opacity-[0.22]"
+      className={`absolute inset-0 w-full h-full pointer-events-none opacity-[0.22] ${className}`}
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>

@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-team.jpg";
+import { NetworkBackground } from "./NetworkBackground";
 
 
 const Hero = () => {
   return (
     <section className="relative flex items-center overflow-hidden pt-24 pb-8">
       <div className="absolute inset-0 bg-[var(--gradient-hero)]" />
+      <NetworkBackground className="opacity-30" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-primary/5 blur-3xl" />
 
       <div className="container relative z-10 px-6 py-12">

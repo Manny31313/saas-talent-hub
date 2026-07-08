@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Compass, Send, Filter, Trophy, HeartHandshake } from "lucide-react";
-import { NetworkBackground } from "./NetworkBackground";
 
 const steps = [
   {
@@ -92,7 +91,6 @@ const Process = () => {
                     <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-primary/10 blur-2xl animate-float-slow" />
                     <div className="absolute -bottom-6 -left-2 w-24 h-24 rounded-full bg-accent/20 blur-2xl animate-float-slower" />
                   </div>
-                  <NetworkBackground />
                   <p className="text-xs uppercase tracking-widest text-primary font-semibold mb-1">{step.day}</p>
                   <h3 className="font-heading text-base font-semibold mb-2">{step.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{step.body}</p>
