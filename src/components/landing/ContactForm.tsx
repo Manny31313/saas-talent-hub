@@ -1,62 +1,52 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 import { FloatingBackground } from "./FloatingBackground";
 
 const CALENDLY_URL = "https://calendly.com/saasrecruitingco/schedule";
 
 const ContactForm = () => {
-  useEffect(() => {
-    const scriptSrc = "https://assets.calendly.com/assets/external/widget.js";
-    if (document.querySelector(`script[src="${scriptSrc}"]`)) return;
-    const script = document.createElement("script");
-    script.src = scriptSrc;
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
-
   return (
     <section className="py-14 border-t border-border" id="contact">
       <div className="container px-6">
-        <div className="grid lg:grid-cols-2 gap-16 max-w-5xl mx-auto">
+        <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center"
+            className="w-full"
           >
             <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-4">
               Let's Build Your <span className="text-gradient">Dream Team</span>
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-8 max-w-md mx-auto lg:mx-0">
+            <p className="text-muted-foreground leading-relaxed mb-8 max-w-2xl mx-auto">
               We're a network of Tech & SaaS professionals and recruiting veterans ready to
               help you hire quality talent, fast. Tell us about your needs and we'll
               get to work.
             </p>
-            <div className="space-y-4 text-sm text-muted-foreground max-w-md mx-auto">
-              <div className="flex items-center justify-center gap-3">
-                <div className="w-2 h-2 rounded-full bg-primary" />
+            <ul className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center mb-10 text-sm text-muted-foreground">
+              <li className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
                 <span>Response within 24 hours</span>
-              </div>
-              <div className="flex items-center justify-center gap-3">
-                <div className="w-2 h-2 rounded-full bg-primary" />
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
                 <span>No upfront fees, we work on success</span>
-              </div>
-            </div>
+              </li>
+            </ul>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative glass rounded-xl overflow-hidden ambient-glow"
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="relative glass rounded-xl overflow-hidden ambient-glow w-full mx-auto"
           >
             <FloatingBackground />
             <div
               className="calendly-inline-widget w-full"
               data-url={`${CALENDLY_URL}?hide_gdpr_banner=1&background_color=f6f1e4&text_color=1a2e1f&primary_color=1a4d2e`}
-              style={{ minWidth: "320px", height: "700px" }}
+              style={{ minWidth: "320px", height: "720px" }}
             />
           </motion.div>
         </div>
