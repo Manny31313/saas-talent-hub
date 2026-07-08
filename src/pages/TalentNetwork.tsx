@@ -114,7 +114,7 @@ const TalentNetwork = () => {
                 <RadioGroup value={intent} onValueChange={setIntent} className="grid sm:grid-cols-2 gap-3">
                   <label
                     htmlFor="intent-active"
-                    className={`cursor-pointer rounded-lg border p-4 text-sm transition-colors ${
+                    className={`cursor-pointer rounded-lg border p-4 text-sm transition-colors ambient-glow ${
                       intent === "active" ? "border-primary bg-primary/5" : "border-border bg-secondary/30"
                     }`}
                   >
@@ -125,7 +125,7 @@ const TalentNetwork = () => {
                   </label>
                   <label
                     htmlFor="intent-passive"
-                    className={`cursor-pointer rounded-lg border p-4 text-sm transition-colors ${
+                    className={`cursor-pointer rounded-lg border p-4 text-sm transition-colors ambient-glow ${
                       intent === "passive" ? "border-primary bg-primary/5" : "border-border bg-secondary/30"
                     }`}
                   >
