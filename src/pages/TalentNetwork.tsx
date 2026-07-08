@@ -166,7 +166,7 @@ const TalentNetwork = () => {
                     <SelectItem value="gtm">Go-to-Market (AE, SDR, CSM)</SelectItem>
                     <SelectItem value="revops">RevOps (Sales Engineer, RevOps Analyst)</SelectItem>
                     <SelectItem value="devops">DevOps (Data Scientist, Data Engineer)</SelectItem>
-                    <SelectItem value="people-ops">People Operations (HR, Talent, People Ops)</SelectItem>
+                    <SelectItem value="people-ops">People Ops (HR, Talent)</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
