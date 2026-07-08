@@ -34,6 +34,14 @@ const steps = [
   },
 ];
 
+const hoverVariants = {
+  hover: { scale: 1.03, y: -6, transition: { duration: 0.2 } },
+};
+
+const circleHoverVariants = {
+  hover: { scale: 1.08, y: -4, transition: { duration: 0.2 } },
+};
+
 const Process = () => {
   return (
     <section className="py-14">
