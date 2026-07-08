@@ -61,7 +61,7 @@ const Contact = () => {
               className="text-center mb-10"
             >
               <h1 className="font-heading text-3xl sm:text-4xl font-bold mb-4">
-                Contact <span className="text-gradient">Us</span>
+                Contact <span className="text-gradient">Us Now</span>
               </h1>
               <p className="text-muted-foreground leading-relaxed">
                 Tell us about your needs and we'll get to work. We respond within 24 hours.

@@ -183,7 +183,7 @@ const RoleDetail = () => {
               className="lg:col-span-2"
             >
               <div className="glass rounded-xl p-6 sm:p-8 sticky top-24 ambient-glow">
-                <h2 className="font-heading text-xl font-semibold mb-1">Apply</h2>
+                <h2 className="font-heading text-xl font-semibold mb-1">Apply Now</h2>
                 <p className="text-sm text-muted-foreground mb-6">
                   Submit your details and we'll be in touch within 48 hours.
                 </p>
